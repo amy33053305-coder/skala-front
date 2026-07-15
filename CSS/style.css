@@ -1,0 +1,65 @@
+.yeon-sung-regular {
+  font-family: "Yeon Sung", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===========================
+   3. 전체 스타일
+=========================== */
+
+body {
+    line-height: 1.8;              /* 줄 간격 */
+    color: #333333;                /* 기본 글자색 */
+    background-color: #f5f7fa;     /* 배경색 */
+    margin: 20px;
+}
+
+
+/* ===========================
+   4. 제목 스타일
+=========================== */
+
+h1 {
+    color: #ffffff;
+    background-color: #2563eb;
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 8px solid #1e3a8a;
+    text-align: center;
+}
+
+h2 {
+    color: #1e3a8a;
+    background-color: #dbeafe;
+    font-size: 1.8rem;
+    padding: 12px;
+    border-left: 6px solid #2563eb;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+
+/* ===========================
+   5. 링크 스타일
+=========================== */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #dc2626;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #7c3aed;
+}
+
+a:active {
+    color: #f97316;
+}
