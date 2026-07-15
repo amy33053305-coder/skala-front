@@ -1,82 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 강의 시간표</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <style>
-    table {
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid #000;
-        padding: 10px;
-        text-align: center;
-    }
-    </style>
 </head>
-<body>
-    <h1>🗓️ 나의 강의 시간표</h1>
-    <table border="1" border-collapse="collapse">
-        <thead bgcolor="#BCE55C">
-            <tr>
-                <th>시간</th>
-                <th>월요일</th>
-                <th>화요일</th>
-                <th>수요일</th>
-                <th>목요일</th>
-                <th>금요일</th>
-            </tr>
-        </thead>
-        <tbody align="center" bgcolor="#B2EBF4">
-            <tr>
-                <td>09:00 - 10:00</td>
-                <td rowspan="3">Vue.js<br>웹 프레임워크</td>
-                <td rowspan="2">네트워크<br>보안 기초</td>
-                <td rowspan="3">웹 시스템<br>설계 및 분석</td>
-                <td rowspan="3">IT 트렌드 특강</td>
-                <td rowspan="3">자바스크립트<br>심화 실습</td>
-            </tr>
-            <tr>
-                <td>10:00 - 11:00</td>
-            </tr>
-            <tr>
-                <td>11:00 - 12:00</td>
-                <td>알고리즘 문제풀이</td>
-            </tr>
-            <tr>
-                <td>12:00 - 13:00</td>
-                <td colspan="5">점심시간</td>
-            </tr>
-            <tr>
-                <td>13:00 - 14:00</td>
-                <td rowspan="4">UI/UX<br>디자인 표준</td>
-                <td rowspan="2">리눅스 시스템 관리</td>
-                <td rowspan="2">클라우드<br>AWS 기초</td>
-                <td rowspan="3">자료구조</td>
-                <td>개인 프로젝트</td>
-            </tr>
-            <tr>
-                <td>14:00 - 15:00</td>
-                <td rowspan="3">오픈소스<br>소프트웨어</td>
-            </tr>
-            <tr>
-                <td>15:00 - 16:00</td>
-                <td rowspan="3">Git & Gitdub<br>버전 관리</td>
-                <td rowspan="3">인공지능<br>머신러닝 기초</td>
-            </tr>
-            <tr>
-                <td>16:00 - 17:00</td>
-                <td rowspan="2">빅데이터<br>분석 실무</td>
-            </tr>
-            <tr>
-                <td>17:00 - 18:00</td>
-                <td>취업 창업 특강</td>
-                <td>주간 회고</td>
-            </tr>
-        </tbody>
-    </table>
+<body class="yeon-sung-regular">
+    <div class="container">
+        <h1>🗓️ 나의 강의 시간표</h1>
+        
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:00 - 10:00</td>
+                    <td rowspan="3" class="subject">Vue.js<br>웹 프레임워크</td>
+                    <td rowspan="2" class="subject">네트워크<br>보안 기초</td>
+                    <td rowspan="3" class="subject">웹 시스템<br>설계 및 분석</td>
+                    <td rowspan="3" class="subject">IT 트렌드 특강</td>
+                    <td rowspan="3" class="subject">자바스크립트<br>심화 실습</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:00 - 11:00</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:00 - 12:00</td>
+                    <td class="subject">알고리즘 문제풀이</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:00 - 13:00</td>
+                    <td colspan="5" class="lunch-break">🥪 점심시간 🥪</td>
+                </tr>
+                <tr>
+                    <td class="time-col">13:00 - 14:00</td>
+                    <td rowspan="4" class="subject">UI/UX<br>디자인 표준</td>
+                    <td rowspan="2" class="subject">리눅스 시스템 관리</td>
+                    <td rowspan="2" class="subject">클라우드<br>AWS 기초</td>
+                    <td rowspan="3" class="subject">자료구조</td>
+                    <td class="subject">개인 프로젝트</td>
+                </tr>
+                <tr>
+                    <td class="time-col">14:00 - 15:00</td>
+                    <td rowspan="3" class="subject">오픈소스<br>소프트웨어</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00 - 16:00</td>
+                    <td rowspan="3" class="subject">Git & Github<br>버전 관리</td>
+                    <td rowspan="3" class="subject">인공지능<br>머신러닝 기초</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:00 - 17:00</td>
+                    <td rowspan="2" class="subject">빅데이터<br>분석 실무</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00 - 18:00</td>
+                    <td class="subject">취업 창업 특강</td>
+                    <td class="subject">주간 회고</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

@@ -75,3 +75,263 @@ a:active {
     border-radius: 12px;     /* 모서리를 둥글게 처리 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
 }
+/* ===========================
+   7. 여행 카드 (Trip Card) 스타일
+=========================== */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 카드를 화면 크기에 맞춰 반응형으로 자동 배치 */
+    gap: 20px; /* 카드 사이 간격 */
+    margin: 20px 0;
+}
+
+.trip-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;   /* 연한 회색 테두리 */
+    border-radius: 8px;          /* 모서리 둥글게 */
+    overflow: hidden;            /* 이미지가 둥근 모서리 밖으로 나가지 않도록 설정 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 카드 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 마우스 호버 효과 부드럽게 */
+}
+
+.trip-card:hover {
+    transform: translateY(-5px); /* 마우스 올렸을 때 살짝 뜨는 효과 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.trip-card img {
+    width: 100%;                 /* 카드 가로폭에 꽉 차게 이미지 설정 */
+    height: 200px;               /* 이미지 높이 통일 */
+    object-fit: cover;           /* 비율 유지하며 카드 크기에 맞게 채움 */
+}
+
+.trip-desc {
+    padding: 15px;               /* 텍스트 내부 여백 */
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #475569;
+    background-color: #fafbfd;
+}
+
+.audio-player, .video-container {
+    text-align: center;
+    margin: 15px 0;
+}
+/* ===========================
+   8. 시간표 (Table) 스타일
+=========================== */
+.timetable {
+    width: 100%;
+    border-collapse: collapse; /* 테이블 셀 사이의 이중 테두리 제거 */
+    margin-top: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* 테이블 모서리 둥글게 적용하기 위함 */
+}
+
+.timetable th {
+    background-color: #2563eb;   /* 메인 블루 컬러 헤더 */
+    color: #ffffff;              /* 헤더 텍스트 흰색 */
+    font-weight: bold;
+    padding: 12px 10px;
+    text-transform: uppercase;
+    border: 1px solid #1e40af;
+}
+
+.timetable td {
+    padding: 12px 8px;
+    border: 1px solid #e2e8f0;   /* 은은하고 연한 회색 그리드 선 */
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* 시간 열 특수 스타일 */
+.time-col {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #64748b;
+    width: 15%;
+}
+
+/* 수업 과목 셀 스타일 */
+.subject {
+    background-color: #f1f5f9;   /* 과목 배경 연한 회색톤으로 가독성 확보 */
+    color: #1e293b;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* 마우스를 올렸을 때 강조 효과 */
+.subject:hover {
+    background-color: #dbeafe;   /* 마우스 올리면 파란색 하이라이트 */
+    color: #1e40af;
+}
+
+/* 점심시간 전용 스타일 */
+.lunch-break {
+    background-color: #fef08a !important; /* 부드러운 파스텔톤 노란색 */
+    color: #854d0e;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* ===========================
+   9. 가독성 높은 회원가입 폼 스타일
+=========================== */
+
+/* 폼 웰컴 메시지 */
+.signup-welcome {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* 폼 행 레이아웃 구성 */
+.form-row {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column; /* 라벨을 위로, 입력창을 아래로 배치하여 가독성 증대 */
+    align-items: flex-start;
+}
+
+.form-row label, .label-mock {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.required {
+    color: #ef4444; /* 필수 입력 아이콘 빨간색 표시 */
+    font-weight: normal;
+}
+
+/* -------------------------------------------
+   1) 입력창 크기 키우기 (Sizing & Typography)
+   ------------------------------------------- */
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form input[type="date"],
+.signup-form select,
+.signup-form textarea {
+    width: 100%;
+    padding: 10px 14px;          /* 안쪽 여백(Padding)을 넓혀 클릭 영역과 가독성 확보 */
+    font-size: 1rem;             /* 글자 크기를 키워 텍스트 시인성 개선 */
+    border: 1px solid #cbd5e1;   /* 부드러운 회색 테두리 */
+    border-radius: 6px;          /* 모서리 둥글게 가공 */
+    background-color: #f8fafc;
+    box-sizing: border-box;      /* 패딩과 테두리가 너비(100%)에 포함되도록 설정 (매우 중요) */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 이메일 입력 영역 병렬 배치 */
+.email-input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.email-input-group input,
+.email-input-group select {
+    flex: 1;
+}
+
+.at {
+    color: #64748b;
+    font-weight: bold;
+}
+
+/* 입력창 포커스 스타일 */
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;       /* 포커스 시 푸른색 강조 */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 네온 효과 */
+}
+
+/* 라디오 & 체크박스 간격 조절 */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+/* -------------------------------------------
+   2) Fieldset 그룹 테두리 다듬기 (Borders)
+   ------------------------------------------- */
+.form-group {
+    border: 1px solid #e2e8f0;   /* 딱딱하고 짙은 검은색 테두리를 연하고 깔끔한 회색선으로 교체 */
+    border-radius: 10px;         /* 그룹 전체의 모서리를 둥글게 깎아 부드러운 느낌 부여 */
+    padding: 24px;               /* 그룹 내부 콘텐츠와 테두리 사이 충분한 여백 확보 */
+    margin-bottom: 25px;         /* 다른 입력 그룹과의 세로 거리 확보 */
+    background-color: #ffffff;
+}
+
+.group-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #1e3a8a;              /* 메인 테마색상 적용 */
+    padding: 0 10px;             /* 테두리 선과 글자가 겹치지 않게 좌우 여백 적용 */
+}
+
+/* -------------------------------------------
+   3) 버튼 꾸미기 (Buttons styling)
+   ------------------------------------------- */
+.button-group {
+    display: flex;
+    gap: 12px;                   /* 버튼 사이의 간격 설정 */
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;                     /* 두 버튼이 공간을 공평하게 절반씩 차지 */
+    padding: 14px;               /* 시원하게 누를 수 있도록 위아래 패딩 증가 */
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;          /* 모서리 곡률 조정 */
+    cursor: pointer;             /* 마우스를 올렸을 때 클릭 포인터 모양 변경 */
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* 가입 완료 버튼 (주요 행동 - Primary) */
+.btn-submit {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;   /* 호버 시 조금 더 어두운 파란색으로 변환 */
+}
+
+.btn-submit:active {
+    transform: scale(0.98);      /* 클릭하는 순간 살짝 눌리는 물리적 피드백 제공 */
+}
+
+/* 다시 작성 버튼 (보조 행동 - Secondary) */
+.btn-reset {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-reset:hover {
+    background-color: #cbd5e1;   /* 호버 시 한 톤 어두운 회색으로 피드백 제공 */
+}
+
+.btn-reset:active {
+    transform: scale(0.98);
+}
