@@ -63,3 +63,15 @@ a:visited {
 a:active {
     color: #f97316;
 }
+
+/* ===========================
+   6. 컨테이너 스타일 (가운데 정렬 및 박스 배치)
+=========================== */
+.container {
+    max-width: 900px;        /* 박스의 최대 너비 제한 */
+    margin: 40px auto;       /* 위아래 40px 여백, 좌우 auto로 설정하여 화면 가운데 정렬 */
+    padding: 30px;           /* 내부 패딩을 주어 안쪽 콘텐츠가 답답해 보이지 않게 함 */
+    background-color: #ffffff; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
+    border-radius: 12px;     /* 모서리를 둥글게 처리 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
+}
