@@ -1,5 +1,7 @@
-.yeon-sung-regular {
-  font-family: "Yeon Sung", system-ui;
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css');
+
+.site-font {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -74,10 +76,20 @@ a:active {
 .container {
     max-width: 900px;        /* 박스의 최대 너비 제한 */
     margin: 40px auto;       /* 위아래 40px 여백, 좌우 auto로 설정하여 화면 가운데 정렬 */
-    padding: 30px;           /* 내부 패딩을 주어 안쪽 콘텐츠가 답답해 보이지 않게 함 */
+    padding: 40px;           /* 내부 패딩을 넓혀 여백감을 강조 */
     background-color: #faf8fa; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
     border-radius: 12px;     /* 모서리를 둥글게 처리 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
+}
+
+/* 페이지 상단 공통 네비게이션 바 (Home 버튼 + 바로가기 메뉴) */
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 /* ===========================
    7. 여행 카드 (Trip Card) 스타일
@@ -95,18 +107,28 @@ a:active {
     border-radius: 8px;          /* 모서리 둥글게 */
     overflow: hidden;            /* 이미지가 둥근 모서리 밖으로 나가지 않도록 설정 */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 카드 그림자 */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 마우스 호버 효과 부드럽게 */
+    transform: rotate(var(--tilt, 0deg));   /* 앨범처럼 살짝 흐트러진 느낌의 기본 기울기 */
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* 마우스 호버 효과 부드럽게 */
 }
- 
+
+/* 앨범에 흩뿌려 놓은 듯 카드마다 번갈아 기울기를 다르게 부여 */
+.trip-grid .trip-card:nth-child(3n+1) { --tilt: -2.5deg; }
+.trip-grid .trip-card:nth-child(3n+2) { --tilt: 1.5deg; }
+.trip-grid .trip-card:nth-child(3n+3) { --tilt: -1deg; }
+.trip-grid .trip-card:first-child { --tilt: -1deg; } /* 대표 사진은 기울기를 절제해서 안정감 있게 */
+
 .trip-card:hover {
-    transform: translateY(-5px); /* 마우스 올렸을 때 살짝 뜨는 효과 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: rotate(0deg) translateY(-8px) scale(1.05); /* 마우스 올렸을 때 반듯해지며 살짝 뜨는 효과 */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* 아래로 드리우는 그림자를 강조 */
+    position: relative;
+    z-index: 2; /* 옆 카드 위로 살짝 겹치며 떠오르도록 */
 }
  
 .trip-card img {
     width: 100%;                 /* 카드 가로폭에 꽉 차게 이미지 설정 */
     height: 200px;               /* 이미지 높이 통일 */
     object-fit: cover;           /* 비율 유지하며 카드 크기에 맞게 채움 */
+    cursor: pointer;             /* 클릭해서 설명을 볼 수 있음을 안내 */
 }
  
 .trip-desc {
@@ -234,6 +256,11 @@ a:active {
     box-sizing: border-box;      /* 패딩과 테두리가 너비에 포함되도록 고정 */
     transition: border-color 0.2s, box-shadow 0.2s; /* 부드러운 변화 효과 */
 }
+
+.signup-form textarea {
+    resize: vertical;            /* 가로 리사이즈를 막아 container 밖으로 확장되지 않도록 제한 */
+    max-width: 100%;
+}
  
 /* -------------------------------------------
    입력창 포커스 시 부드러운 하이라이트 효과 (선택 사항)
@@ -266,16 +293,6 @@ a:active {
 .at {
     color: #64748b;
     font-weight: bold;
-}
- 
-/* 입력창 포커스 스타일 */
-.signup-form input:focus,
-.signup-form select:focus,
-.signup-form textarea:focus {
-    outline: none;
-    border-color: #2563eb;       /* 포커스 시 푸른색 강조 */
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 네온 효과 */
 }
  
 /* 라디오 & 체크박스 간격 조절 */
@@ -345,6 +362,7 @@ a:active {
  
 .btn-submit:active {
     transform: scale(0.98);      /* 클릭하는 순간 살짝 눌리는 물리적 피드백 제공 */
+    color: #000000;              /* 클릭 유지 시 글자색 검정으로 전환 (버튼 밖으로 벗어나면 :active 해제되어 자동 복원) */
 }
  
 /* 다시 작성 버튼 (보조 행동 - Secondary) */
@@ -368,16 +386,33 @@ nav ul {
     padding: 0;
     list-style: none;
 }
- 
+
 nav a {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #c0d56e;
     background-color: #d4e87a;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
- 
+
 nav a:hover {
     background-color: rgb(245, 170, 156);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* 현재 보고 있는 페이지의 메뉴 항목을 강조 표시 */
+nav a.current {
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+    color: #ffffff;
+}
+
+nav a.current:hover {
+    background-color: #1e3a8a;
+    transform: none;
+    box-shadow: none;
 }
  
 /* ===========================
@@ -417,21 +452,36 @@ nav a:hover {
 }
  
 /* ===========================
-   12. 여행지 카드 3열 Grid 레이아웃
+   12. 여행지 카드 모자이크 Grid 레이아웃
+   - 대표 사진(첫 카드) 1장을 크게, 나머지 3장을 옆에 쌓아
+     빈 칸 없이 앨범 콜라주처럼 꽉 채운다.
 =========================== */
 .trip-grid {
     display: grid;
-    /* 핵심: 무조건 3개의 열을 생성하고 1fr(비율)씩 균등하게 공간 차지 */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: 3fr 2fr; /* 왼쪽 대표 사진 : 오른쪽 작은 사진 목록 비율 */
     gap: 20px; /* 카드 상하좌우 간격 */
     margin: 30px 0;
 }
- 
-/* 카드가 3열에 맞춰지므로 이미지 너비도 100%로 설정되어야 안 깨집니다 */
+
+/* 대표 사진 카드는 오른쪽 3장의 세로 길이를 모두 합친 만큼 늘어난다 */
+.trip-grid .trip-card:first-child {
+    grid-row: span 3;
+    display: flex;              /* 이미지가 캡션(p) 자리를 침범하지 않도록 세로 flex로 배치 */
+    flex-direction: column;
+}
+
 .trip-card img {
     width: 100%;
-    height: 250px;
+    height: 140px; /* 옆에 쌓이는 작은 사진들의 높이 */
     object-fit: cover;
+}
+
+/* 대표 사진은 캡션(p) 높이를 제외한 나머지 공간만 꽉 채운다 */
+.trip-grid .trip-card:first-child img {
+    flex: 1;                    /* 캡션이 차지하는 만큼을 빼고 남은 공간을 이미지가 채움 */
+    width: 100%;
+    height: auto;
+    min-height: 200px;
 }
  
 .border-bottom-yellow {
@@ -512,15 +562,22 @@ nav a:hover {
        2) myTrip.html : 3열 Grid 배열을 1열로 조정
        ------------------------------------------- */
     
-    /* 3열 바둑판 배열을 세로 1열 배열로 조절 */
+    /* 모자이크 배열을 세로 1열 배열로 조절 */
     .trip-grid {
-        grid-template-columns: 1fr; /* 3열(repeat(3, 1fr)) 구조를 단일 1열로 변경 */
+        grid-template-columns: 1fr; /* 대표사진+3장 모자이크 구조를 단일 1열로 변경 */
         gap: 15px;                  /* 모바일 화면에 맞춰 카드 사이 여백을 좁힘 */
     }
- 
-    /* 모바일 가독성을 위해 카드 이미지 높이 소폭 조정 */
-    .trip-card img {
+
+    /* 1열로 바뀌면 더 이상 세로로 늘어날 필요가 없으므로 span 해제 */
+    .trip-grid .trip-card:first-child {
+        grid-row: auto;
+    }
+
+    /* 모바일 가독성을 위해 카드 이미지 높이 소폭 조정 (대표 사진도 동일하게 통일) */
+    .trip-card img,
+    .trip-grid .trip-card:first-child img {
         height: 220px;              /* 너무 길거나 작지 않게 적절한 높이 설정 */
+        min-height: 0;
     }
 }
  
@@ -676,8 +733,100 @@ nav a:hover {
 }
 
 .home-btn {
+    display: inline-block;
     background-color: #e7a24d;
-    padding: 4px;
+    padding: 6px 12px;
     border-radius: 5px;
     border: 1px solid #d68a3d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   17. 공통 푸터 스타일 (모든 하위 페이지 통일)
+=========================== */
+.site-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.site-footer address {
+    font-style: normal;
+    margin-bottom: 6px;
+}
+
+/* ===========================
+   16. 여행 앨범 사진 설명 모달
+=========================== */
+.trip-modal {
+    display: none;                      /* 평소에는 숨겨두고 JS로 열고 닫음 */
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.trip-modal.is-open {
+    display: flex;
+}
+
+.trip-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.trip-modal-content img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.trip-modal-content h3 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+.trip-modal-content p {
+    color: #334155;
+    line-height: 1.7;
+}
+
+.trip-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    color: #334155;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.trip-modal-close:hover {
+    background-color: #e2e8f0;
 }

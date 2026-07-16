@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 여행 앨범</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
-<body class="yeon-sung-regular">
+<body class="site-font">
     <div class="container">
-        <a href="./index.html" class="home-btn">🏠 Home</a>
+        <div class="site-nav">
+            <a href="./index.html" class="home-btn">🏠 Home</a>
+            <nav>
+                <ul>
+                    <li><a href="./myProfile.html">👨 소개</a></li>
+                    <li><a href="./myClass.html">🗓️ 시간표</a></li>
+                    <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
+                    <li><a href="./myTrip.html" class="current">🛫 앨범</a></li>
+                    <li><a href="./signUp.html">👤 가입</a></li>
+                </ul>
+            </nav>
+        </div>
         <h1>🖼️ 나의 여행 앨범 🎧</h1>
         
         <div class="audio-player">
@@ -23,25 +31,56 @@
         
         <hr>
 
+        <h2 class="border">🇵🇭 필리핀 여행 (2015년)</h2>
         <div class="trip-grid">
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAzMjRfOSAg%2FMDAxNzQyODA4MDgzMjAz.IHU7njELH8zKXZ6xkTia46AWJ6Hnx-ojc-CfxPgLrc0g.ZyF_pODAizS_gD7mRzQJlvdyurVBg2OsW1rDEEpc1cgg.PNG%2Fimage.png&type=a340" alt="필리핀 마닐라">
-                <p class="trip-desc">필리핀 마닐라 (2015년)</p>
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAzMjRfOSAg%2FMDAxNzQyODA4MDgzMjAz.IHU7njELH8zKXZ6xkTia46AWJ6Hnx-ojc-CfxPgLrc0g.ZyF_pODAizS_gD7mRzQJlvdyurVBg2OsW1rDEEpc1cgg.PNG%2Fimage.png&type=a340" alt="필리핀 마닐라" data-desc="필리핀의 수도 마닐라는 스페인 식민지 시대의 흔적이 남은 '인트라무로스'와 현대적인 쇼핑·엔터테인먼트 시설이 공존하는 도시입니다. 호세 리잘을 기리는 리잘 공원 등 역사와 현대가 어우러진 명소가 가득합니다.">
+                <p class="trip-desc">필리핀 마닐라</p>
             </div>
 
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MjVfMTQw%2FMDAxNzE5Mjk4NzQ5Nzg2.yyPqv-ms2sQ-HaaiMIky-2fwVof38LP6S0p6AmtcwjAg.-WXojk47hp0ZRsZx2UAIvavVo1yvSCGrEvUude2UKOsg.JPEG%2F240_F_244312786_qu8X7ywYQokjjvZssbjGsPzkVXQiLBE2.jpg&type=a340" alt="도쿄 시부야">
-                <p class="trip-desc">도쿄 시부야 (2025년)</p>
+                <img src="../media/성당.jpeg" alt="마닐라 대성당" data-desc="인트라무로스 로마 광장에 자리한 마닐라 대성당은 1571년 처음 세워진 이후 지진과 화재로 여러 차례 재건되어 현재의 모습(1958년 완공)을 갖췄습니다. 1981년 교황 요한 바오로 2세에 의해 소 바실리카로 지정된 필리핀 가톨릭의 중심지입니다.">
+                <p class="trip-desc">마닐라 대성당</p>
             </div>
 
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAzMTZfMTc4%2FMDAxNzczNjUyMDI0MTYx.MIg3FsSWMB1t_i7NIPnV1_6yHx3lKnvDh3GrXVQa_n8g.PxWZCtJSsZ4mnOKSrKNb5j4CSJkBgLL8PmIB2Rkdmewg.JPEG%2FKakaoTalk_20260316_174712921.jpg&type=a340" alt="도쿄 타워">
-                <p class="trip-desc">도쿄타워 (2025년)</p>
+                <img src="../media/보라카이.jpeg" alt="보라카이 해변" data-desc="보라카이 화이트비치는 4km에 걸친 새하얀 모래사장과 에메랄드빛 바다로 유명한 필리핀 최고의 휴양지입니다. 완만한 수심과 잔잔한 파도 덕분에 수영과 석양 감상을 즐기기에 이상적입니다.">
+                <p class="trip-desc">보라카이 해변</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="../media/보라카이 바다.jpeg" alt="보라카이 바닷속 스노클링" data-desc="보라카이 근해는 맑은 바닷물과 다채로운 산호초 덕분에 초보자도 쉽게 즐길 수 있는 스노클링 명소로 꼽힙니다. 방카(전통 배)를 타고 크리스탈 코브 등 인근 섬을 오가는 아일랜드 호핑 투어에서 다양한 해양 생물을 만날 수 있습니다.">
+                <p class="trip-desc">보라카이 스노클링</p>
             </div>
         </div>
 
         <hr>
-        
+
+        <h2 class="border">🇯🇵 일본 여행 (2026년)</h2>
+        <div class="trip-grid">
+            <div class="trip-card">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MjVfMTQw%2FMDAxNzE5Mjk4NzQ5Nzg2.yyPqv-ms2sQ-HaaiMIky-2fwVof38LP6S0p6AmtcwjAg.-WXojk47hp0ZRsZx2UAIvavVo1yvSCGrEvUude2UKOsg.JPEG%2F240_F_244312786_qu8X7ywYQokjjvZssbjGsPzkVXQiLBE2.jpg&type=a340" alt="도쿄 시부야" data-desc="시부야는 패션과 쇼핑, 최신 트렌드가 모이는 도쿄 제일의 번화가입니다. 시부야109 등 개성 강한 쇼핑 시설과 뛰어난 대중교통 접근성으로 도쿄 여행의 필수 코스로 꼽힙니다.">
+                <p class="trip-desc">도쿄 시부야</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAzMTZfMTc4%2FMDAxNzczNjUyMDI0MTYx.MIg3FsSWMB1t_i7NIPnV1_6yHx3lKnvDh3GrXVQa_n8g.PxWZCtJSsZ4mnOKSrKNb5j4CSJkBgLL8PmIB2Rkdmewg.JPEG%2FKakaoTalk_20260316_174712921.jpg&type=a340" alt="도쿄 타워" data-desc="1958년 완공된 높이 333m의 도쿄타워는 제2차 세계대전 이후 일본 부흥의 상징으로 세워졌습니다. 완공 당시 에펠탑을 능가하는 세계 최고 높이를 자랑했으며, 지금도 도쿄를 대표하는 랜드마크입니다.">
+                <p class="trip-desc">도쿄타워</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="../media/일본 시부야 스크램블.jpeg" alt="시부야 스크램블 교차로" data-desc="세계에서 가장 붐비는 횡단보도로 알려진 시부야 스크램블 교차로는 신호가 바뀌면 사방에서 사람들이 동시에 대각선으로 건너는 독특한 광경으로 유명합니다. 1973년 개통 이후 영화와 드라마에도 자주 등장하며 도쿄를 상징하는 장소가 되었습니다.">
+                <p class="trip-desc">시부야 스크램블 교차로</p>
+            </div>
+
+            <div class="trip-card">
+                <img src="../media/일본 롯폰기.jpeg" alt="롯폰기 일루미네이션" data-desc="롯폰기 힐즈의 게야키자카 거리는 겨울이면 약 400m에 걸쳐 93만 개의 파란빛 LED로 장식되는 도쿄 대표 일루미네이션 명소로 변신합니다. 도쿄타워를 배경 삼아 반짝이는 가로수 길은 매년 11월부터 12월까지 무료로 즐길 수 있습니다.">
+                <p class="trip-desc">롯폰기 일루미네이션</p>
+            </div>
+        </div>
+
+        <hr>
+
         <h2 class="border">✈️ 일본 여행 간접 체험</h2>
         <div class="video-container">
             <video width="50%" max-width="300px" controls>
@@ -50,6 +89,24 @@
             </video>
             <p>아름다운 일본의 도시 여행 ✈️</p>
         </div>
+
+        <div id="tripModal" class="trip-modal">
+            <div class="trip-modal-content">
+                <button id="tripModalClose" class="trip-modal-close" type="button" aria-label="닫기">&times;</button>
+                <img id="tripModalImg" src="" alt="">
+                <h3 id="tripModalTitle"></h3>
+                <p id="tripModalDesc"></p>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <address>
+                이메일 문의 :
+                <a href="mailto:ymkim7756@naver.com">ymkim7756@naver.com</a>
+            </address>
+            <p>&copy; 2026 김영민의 포트폴리오.</p>
+        </footer>
     </div>
+    <script src="../javascript/tripAlbum.js"></script>
 </body>
 </html>
