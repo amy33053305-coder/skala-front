@@ -21,23 +21,26 @@ body {
 =========================== */
 
 h1 {
-    color: #ffffff;
-    background-color: #2563eb;
+    color: #2d2323;
     font-size: 2.5rem;
     padding: 20px;
-    border-radius: 10px;
-    border-left: 8px solid #1e3a8a;
     text-align: center;
+    border-bottom: 2px solid #1e293b;
 }
 
 h2 {
     color: #1e3a8a;
-    background-color: #dbeafe;
     font-size: 1.8rem;
     padding: 12px;
-    border-left: 6px solid #2563eb;
-    border-radius: 6px;
     margin-top: 30px;
+}
+
+h2.border {
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: #81da9c;
 }
 
 
@@ -138,12 +141,12 @@ a:active {
 }
 
 .timetable th {
-    background-color: #2563eb;   /* 메인 블루 컬러 헤더 */
+    background-color: #81da9c;   /* 메인 블루 컬러 헤더 */
     color: #ffffff;              /* 헤더 텍스트 흰색 */
     font-weight: bold;
     padding: 12px 10px;
     text-transform: uppercase;
-    border: 1px solid #1e40af;
+    border: 1px solid #6fb681;
 }
 
 .timetable td {
@@ -229,6 +232,16 @@ a:active {
     background-color: #f8fafc;
     box-sizing: border-box;      /* 패딩과 테두리가 너비(100%)에 포함되도록 설정 (매우 중요) */
     transition: border-color 0.2s, box-shadow 0.2s;
+}
+.signup-form input[type="text"]:focus,
+.signup-form input[type="password"]:focus,
+.signup-form input[type="date"]:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;       /* 클릭 시에만 파란색 테두리로 강조 */
+    background-color: #ffffff;   /* 클릭 시에만 배경을 흰색으로 전환 */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 블루 네온 효과 */
 }
 
 /* 이메일 입력 영역 병렬 배치 */
@@ -339,4 +352,147 @@ a:active {
 
 .btn-reset:active {
     transform: scale(0.98);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: rgb(245, 170, 156);
+}
+
+/* ===========================
+   10. Flexbox 네비게이션 레이아웃
+=========================== */
+.flex-nav ul {
+    display: flex;                  /* 리스트를 가로로 정렬 */
+    justify-content: space-around;  /* 항목들 사이의 간격을 동일하게 분배 */
+    list-style-type: none;          /* 불릿(점) 기호 제거 */
+    padding: 0;
+    margin: 20px 0;
+    border-top: 2px solid #cbd5e1;  /* 이미지처럼 상하 구분선 추가 */
+    border-bottom: 2px solid #cbd5e1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* ===========================
+   11. 2단 분할 레이아웃 (Main & Aside)
+=========================== */
+.layout-wrapper {
+    display: flex;                  /* 자식 요소(main, aside)를 가로로 배치 */
+    gap: 30px;                      /* 양쪽 단 사이의 간격 */
+    align-items: flex-start;        /* 콘텐츠 높이가 달라도 위쪽 기준으로 정렬 */
+    margin-top: 20px;
+}
+
+.main-content {
+    flex: 7;                        /* 전체 너비 중 약 70% 차지 */
+}
+
+.sidebar-content {
+    flex: 3;                        /* 전체 너비 중 약 30% 차지 */
+    background-color: #f8fafc;      /* 사이드바 영역을 눈에 띄게 약한 배경색 적용 */
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 8px;
+}
+
+/* ===========================
+   12. 여행지 카드 3열 Grid 레이아웃
+=========================== */
+.trip-grid {
+    display: grid;
+    /* 핵심: 무조건 3개의 열을 생성하고 1fr(비율)씩 균등하게 공간 차지 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* 카드 상하좌우 간격 */
+    margin: 30px 0;
+}
+
+/* 카드가 3열에 맞춰지므로 이미지 너비도 100%로 설정되어야 안 깨집니다 */
+.trip-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.border-bottom-yellow {
+    border-bottom: 2px solid #fef08a;
+}
+
+.border-left {
+    border-left: 2px solid rgb(125, 238, 125);
+    background-color: azure;
+}
+/* ===================================================
+   13. 반응형 웹 디자인 (786px 이하 모바일 기기 대응)
+=================================================== */
+
+@media (max-width: 786px) {
+    
+    /* -------------------------------------------
+       1) Index.html : 본문/사이드바 및 메뉴 1열 정렬
+       ------------------------------------------- */
+    
+    /* 2단 분할 레이아웃을 세로 1열 구조로 변경 */
+    .layout-wrapper {
+        flex-direction: column;    /* 가로(row) 배치를 세로(column) 배치로 변경 */
+        gap: 20px;                 /* 간격 소폭 축소 */
+    }
+
+    /* 메인 콘텐츠와 사이드바가 가로폭을 100% 꽉 채우도록 설정 */
+    .main-content, 
+    .sidebar-content {
+        flex: none;                /* 기존의 7:3 비율 분할 제거 */
+        width: 100%;               /* 부모 너비에 꽉 차게 조절 */
+    }
+
+    /* 바로가기 메뉴 리스트를 세로 1열로 배치 */
+    .flex-nav ul {
+        flex-direction: column;    /* 가로 배치를 세로 방향으로 변경 */
+        align-items: stretch;      /* 메뉴 버튼들이 가로로 꽉 차도록 설정 */
+        gap: 10px;                 /* 메뉴 아이템 사이의 간격 */
+        padding: 10px;
+    }
+
+    /* 각 메뉴 항목 스타일 조정 */
+    .flex-nav li {
+        text-align: center;
+        border-bottom: 1px dashed #e2e8f0; /* 메뉴 항목 사이에 연한 점선 추가 */
+    }
+
+    .flex-nav li:last-child {
+        border-bottom: none;       /* 마지막 메뉴는 밑줄 제거 */
+    }
+
+    .flex-nav li a {
+        display: block;            /* 클릭 영역을 가로 전체로 확장 */
+        padding: 10px 0;
+    }
+
+
+    /* -------------------------------------------
+       2) myTrip.html : 3열 Grid 배열을 1열로 조정
+       ------------------------------------------- */
+    
+    /* 3열 바둑판 배열을 세로 1열 배열로 조절 */
+    .trip-grid {
+        grid-template-columns: 1fr; /* 3열(repeat(3, 1fr)) 구조를 단일 1열로 변경 */
+        gap: 15px;                  /* 모바일 화면에 맞춰 카드 사이 여백을 좁힘 */
+    }
+
+    /* 모바일 가독성을 위해 카드 이미지 높이 소폭 조정 */
+    .trip-card img {
+        height: 220px;              /* 너무 길거나 작지 않게 적절한 높이 설정 */
+    }
 }
