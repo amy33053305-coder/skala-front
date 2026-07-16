@@ -19,12 +19,12 @@
     </header>
  
     <nav class="flex-nav">
-        <h2 class="border-left">📁 바로가기 메뉴</h2>
+        <h2>📁 바로가기 메뉴</h2>
         <ul>
-            <li><a href="./myProfile.html">소개 (Profile)</a></li>
-            <li><a href="./myClass.html">수업 시간표 (Class)</a></li>
-            <li><a href="./myHoliday.html">휴일 계획 (Holiday)</a></li>
-            <li><a href="./myTrip.html">여행 앨범 (Album)</a></li>
+            <li><a href="./myProfile.html">👨 소개 (Profile)</a></li>
+            <li><a href="./myClass.html">🗓️ 수업 시간표 (Class)</a></li>
+            <li><a href="./myHoliday.html">🏖️ 휴일 계획 (Holiday)</a></li>
+            <li><a href="./myTrip.html">🛫 여행 앨범 (Album)</a></li>
             <li><a href="./signUp.html">👤 회원가입 (Sign Up)</a></li>
         </ul>
     </nav>
@@ -43,7 +43,7 @@
                     </article>
                 </section>
  
-                <section>
+                <section class="scroll-reveal">
                     <h2 class="border-bottom-yellow">📷 이달의 베스트 컷</h2>
                     <figure>
                         <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1734261781802-e51a8f5c18ca%3Ffm%3Djpg%26q%3D60%26w%3D3000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%253D&type=a340"
@@ -53,6 +53,12 @@
                             양숴현(阳朔县, Yangshuo) 일대 (2026년 촬영)
                         </figcaption>
                     </figure>
+                </section>
+                <section class="game-area">
+                    <h3 class="border-bottom-yellow">🎮 미니게임 천국</h3>
+                    <button class="btn-submit" onclick="startGame()">업다운 게임 🙅‍♂️</button>
+                    <button class="btn-submit" onclick="checkGrade()">성적 계산기 🎯</button>
+                    <button class="btn-submit" onclick="showMyBag()">내 가방 보기 💼</button>
                 </section>
             </main>
  
@@ -78,11 +84,16 @@
                     </div>
                 </section>
                 <hr>
-                <section class="game-area">
-                    <h3 class="border-bottom-yellow">🎮 미니게임 천국</h3>
-                    <button class="btn-submit" onclick="startGame()">업다운 게임 🙅‍♂️</button>
-                    <button class="btn-submit" onclick="checkGrade()">성적 계산기 🎯</button>
-                    <button class="btn-submit" onclick="showMyBag()">내 가방 보기 💼</button>
+                <section class="route-area">
+                    <h3 class="border-bottom-yellow">🚗 교통 정보 조회</h3>
+                    <div class="route-search">
+                        <input type="text" id="originInput" placeholder="출발지 (예: 광주)">
+                        <input type="text" id="destinationInput" placeholder="목적지 (예: 서울)">
+                        <button id="routeSearchBtn" class="btn-submit" type="button">조회</button>
+                    </div>
+                    <div id="route-box">
+                        <p>출발지와 목적지를 입력하면 거리와 소요 시간이 표시됩니다.</p>
+                    </div>
                 </section>
             </aside>
  
@@ -103,8 +114,11 @@
     <script src="../javascript/upDown.js"></script>
     <script src="../javascript/grade.js"></script>
     <script src="../javascript/bag.js"></script>
+    <script src="../javascript/scrollReveal.js"></script>
     <!-- weatherAPI.js는 realtimeInfo.js 내부에서 import로 불러오므로 별도 태그 불필요 -->
     <script type="module" src="../javascript/realtimeInfo.js"></script>
+    <!-- weatherAPI.js, routeAPI.js는 trafficInfo.js 내부에서 import로 불러오므로 별도 태그 불필요 -->
+    <script type="module" src="../javascript/trafficInfo.js"></script>
 </body>
  
 </html>

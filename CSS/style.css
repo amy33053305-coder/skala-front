@@ -11,7 +11,7 @@
 body {
     line-height: 1.8;              /* 줄 간격 */
     color: #333333;                /* 기본 글자색 */
-    background-color: #f5f7fa;     /* 배경색 */
+    background-color: #ffffff;     /* 배경색 */
     margin: 20px;
 }
  
@@ -75,7 +75,7 @@ a:active {
     max-width: 900px;        /* 박스의 최대 너비 제한 */
     margin: 40px auto;       /* 위아래 40px 여백, 좌우 auto로 설정하여 화면 가운데 정렬 */
     padding: 30px;           /* 내부 패딩을 주어 안쪽 콘텐츠가 답답해 보이지 않게 함 */
-    background-color: #fffdff; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
+    background-color: #faf8fa; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
     border-radius: 12px;     /* 모서리를 둥글게 처리 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
 }
@@ -336,6 +336,7 @@ a:active {
 .btn-submit {
     background-color: #2563eb;
     color: #ffffff;
+    display: inline;
 }
  
 .btn-submit:hover {
@@ -370,8 +371,9 @@ nav ul {
  
 nav a {
     padding: 10px;
-    border-radius: 3px;
-    border: 1px solid #333333
+    border-radius: 4px;
+    border: 1px solid #c0d56e;
+    background-color: #d4e87a;
 }
  
 nav a:hover {
@@ -409,7 +411,6 @@ nav a:hover {
  
 .sidebar-content {
     flex: 3;                        /* 전체 너비 중 약 30% 차지 */
-    background-color: #f8fafc;      /* 사이드바 영역을 눈에 띄게 약한 배경색 적용 */
     padding: 20px;
     padding-top: 0;
     border-radius: 8px;
@@ -437,9 +438,28 @@ nav a:hover {
     border-bottom: 2px solid #fef08a;
 }
  
+/* ===========================
+   스크롤 등장 애니메이션 (Scroll Reveal)
+   - .scroll-reveal : 초기 숨김 상태 (아래에 숨어 있음)
+   - .is-visible    : JS가 추가하는 클래스 → 위로 올라오며 페이드인
+=========================== */
+.scroll-reveal {
+    opacity: 0;                              /* 처음엔 완전히 투명 */
+    transform: translateY(50px);            /* 아래로 50px 이동된 상태에서 시작 */
+    transition:
+        opacity 0.7s ease,                  /* 0.7초 동안 서서히 나타남 */
+        transform 0.7s ease;                /* 0.7초 동안 위로 올라옴 */
+}
+ 
+.scroll-reveal.is-visible {
+    opacity: 1;                              /* 완전히 불투명하게 */
+    transform: translateY(0);               /* 원래 위치로 복귀 */
+}
+ 
 .border-left {
     border-left: 2px solid rgb(125, 238, 125);
     background-color: azure;
+    border-radius: 5px;
 }
 /* ===================================================
    13. 반응형 웹 디자인 (786px 이하 모바일 기기 대응)
@@ -608,4 +628,56 @@ nav a:hover {
 .weather-error {
     color: #dc2626;
     font-weight: 600;
+}
+
+/* ===========================
+   15. 교통 정보(출발지/목적지) 위젯 스타일
+=========================== */
+.route-search {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.route-search input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.route-search input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.route-search button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+#route-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#route-box p {
+    margin: 4px 0;
+}
+
+.home-btn {
+    background-color: #e7a24d;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #d68a3d;
 }
