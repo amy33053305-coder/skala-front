@@ -14,11 +14,11 @@
 <body class="yeon-sung-regular">
     <div class="container">
     <header>
-        <h1>김영민의 유니버스 🚀</h1>
+        <h1 class="fade-in-title">김영민의 유니버스 🚀</h1>
         <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지입니다.</p>
     </header>
 
-    <nav>
+    <nav class="flex-nav">
         <h2>📁 바로가기 메뉴</h2>
         <ul>
             <li><a href="./myProfile.html">소개 (Profile)</a></li>
@@ -29,59 +29,58 @@
         </ul>
     </nav>
 
-    <main>
+    <div class="layout-wrapper">
+            
+            <main class="main-content">
+                <section>
+                    <h2 class="border-left">📌 오늘의 주요 소식</h2>
+                    <article>
+                        <h3 class="border-bottom-yellow">최근 공지 및 업데이트</h3>
+                        <p><b>[업데이트] 여행 앨범에 동영상 추가 완료!</b></p>
+                        <p>
+                            작성일: <time datetime="2026-07-15">2026년 7월 15일</time>
+                        </p>
+                    </article>
+                </section>
 
-        <section>
-            <h2>📌 오늘의 주요 소식</h2>
+                <section>
+                    <h2 class="border-bottom-yellow">📷 이달의 베스트 컷</h2>
+                    <figure>
+                        <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1734261781802-e51a8f5c18ca%3Ffm%3Djpg%26q%3D60%26w%3D3000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%253D&type=a340"
+                            alt="중국 광시좡족자치구 구이린 양숴의 자연 풍경">
+                        <figcaption style="font-size: 14px;">
+                            중국 광시좡족자치구(广西壮族自治区) 구이린(桂林)시
+                            양숴현(阳朔县, Yangshuo) 일대 (2026년 촬영)
+                        </figcaption>
+                    </figure>
+                </section>
+            </main>
 
-            <article>
-                <h3>최근 공지 및 업데이트</h3>
-                <h4>[업데이트] 여행 앨범에 동영상 추가 완료!</h4>
+            <aside class="sidebar-content">
+                <section>
+                    <h2 class="border-left">✨ 실시간 정보</h2>
+                    <p>현재 위치: 광주광역시 광산구 📍</p>
+                    <p>오늘의 날씨: 🌤️ 맑음</p>
+                </section>
+                <hr>
+                <section class="weather-area">
+                    <h3 class="border-bottom-yellow">🌍 실시간 날씨 조회</h3>
+                    <label for="citySelect" class="weather-select-label">도시 선택</label>
+                    <select id="citySelect" class="weather-select"></select>
+                    <div id="weather-box">
+                        <p>도시를 선택하면 날씨 정보가 표시됩니다.</p>
+                    </div>
+                </section>
+                <hr>
+                <section class="game-area">
+                    <h3 class="border-bottom-yellow">🎮 미니게임 천국</h3>
+                    <button class="btn-submit" onclick="startGame()">업다운 게임 🙅‍♂️</button>
+                    <button class="btn-submit" onclick="checkGrade()">성적 계산기 🎯</button>
+                    <button class="btn-submit" onclick="showMyBag()">내 가방 보기 💼</button>
+                </section>
+            </aside>
 
-                <p>
-                    히로시마 지역을 감상할 수 있는 멋진 영상이 추가되었습니다!
-                    이제 소리와 영상으로 시청할 수 있습니다.
-                </p>
-
-                <p>
-                    <time datetime="2026-07-15">작성일: 2026년 7월 15일</time>
-                </p>
-            </article>
-        </section>
-
-        <section>
-            <h2>📷 이달의 베스트 컷</h2>
-
-            <figure>
-                <img
-                    src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1734261781802-e51a8f5c18ca%3Ffm%3Djpg%26q%3D60%26w%3D3000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%253D&type=a340"
-                    alt="중국 광시좡족자치구 구이린 양숴의 자연 풍경">
-
-                <figcaption>
-                    중국 광시좡족자치구(广西壮族自治区) 구이린(桂林)시
-                    양숴현(阳朔县, Yangshuo) 일대 (2026년 촬영)
-                </figcaption>
-            </figure>
-        </section>
-
-        <section>
-            <h2>✨ 실시간 정보</h2>
-
-            <p>
-                현재 위치: 광주광역시 광산구
-            </p>
-
-            <p>
-                오늘의 날씨 :
-                <a href="https://www.google.com/search?q=%EC%98%A4%EB%8A%98%EC%9D%98+%EB%82%A0%EC%94%A8"
-                    target="_blank" rel="noopener noreferrer">
-                    날씨 정보 확인
-                </a>
-                🌤️
-            </p>
-        </section>
-
-    </main>
+        </div>
 
     <footer>
         <address>
@@ -95,6 +94,11 @@
         </p>
     </footer>
     </div>
+    <script src="../javascript/upDown.js"></script>
+    <script src="../javascript/grade.js"></script>
+    <script src="../javascript/bag.js"></script>
+    <!-- weatherAPI.js는 realtimeInfo.js 내부에서 import로 불러오므로 별도 태그 불필요 -->
+    <script type="module" src="../javascript/realtimeInfo.js"></script>
 </body>
 
 </html>
