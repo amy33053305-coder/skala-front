@@ -115,8 +115,13 @@ a:active {
     background-color: #fafbfd;
 }
 
-.audio-player, .video-container {
+.audio-player {
     text-align: center;
+    margin: 15px 0;
+}
+
+.video-container {
+    text-align: left;
     margin: 15px 0;
 }
 /* ===========================
