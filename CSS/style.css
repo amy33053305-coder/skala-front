@@ -501,3 +501,15 @@ nav a:hover {
         height: 220px;              /* 너무 길거나 작지 않게 적절한 높이 설정 */
     }
 }
+
+.game-area {
+    display: grid;
+    grid-row: 2;
+    
+}
+.game-area button {
+    margin:5px;
+    border-radius: 5px;
+    border-color: #475569;
+    text-align: center;
+}
