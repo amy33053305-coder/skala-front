@@ -217,7 +217,7 @@ a:active {
 }
 
 /* -------------------------------------------
-   1) 입력창 크기 키우기 (Sizing & Typography)
+   1) 입력창 크기 키우기 및 기본 스타일 유지 (포커스 여부와 상관없이 항상 적용)
    ------------------------------------------- */
 .signup-form input[type="text"],
 .signup-form input[type="password"],
@@ -225,14 +225,18 @@ a:active {
 .signup-form select,
 .signup-form textarea {
     width: 100%;
-    padding: 10px 14px;          /* 안쪽 여백(Padding)을 넓혀 클릭 영역과 가독성 확보 */
-    font-size: 1rem;             /* 글자 크기를 키워 텍스트 시인성 개선 */
-    border: 1px solid #cbd5e1;   /* 부드러운 회색 테두리 */
-    border-radius: 6px;          /* 모서리 둥글게 가공 */
-    background-color: #f8fafc;
-    box-sizing: border-box;      /* 패딩과 테두리가 너비(100%)에 포함되도록 설정 (매우 중요) */
-    transition: border-color 0.2s, box-shadow 0.2s;
+    padding: 10px 14px;          /* 안쪽 여백을 넓혀 시각적 안정감 부여 */
+    font-size: 1rem;             /* 글자 크기 조정 */
+    border: 1px solid #cbd5e1;   /* 스크린샷과 같은 은은한 회색 테두리 */
+    border-radius: 6px;          /* 모서리를 부드럽게 둥글게 가공 */
+    background-color: #f8fafc;   /* 중요: 포커스 전에도 항상 유지되는 연한 회색 배경 */
+    box-sizing: border-box;      /* 패딩과 테두리가 너비에 포함되도록 고정 */
+    transition: border-color 0.2s, box-shadow 0.2s; /* 부드러운 변화 효과 */
 }
+
+/* -------------------------------------------
+   입력창 포커스 시 부드러운 하이라이트 효과 (선택 사항)
+   ------------------------------------------- */
 .signup-form input[type="text"]:focus,
 .signup-form input[type="password"]:focus,
 .signup-form input[type="date"]:focus,
@@ -242,6 +246,7 @@ a:active {
     border-color: #2563eb;       /* 클릭 시에만 파란색 테두리로 강조 */
     background-color: #ffffff;   /* 클릭 시에만 배경을 흰색으로 전환 */
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 블루 네온 효과 */
+    color: black;
 }
 
 /* 이메일 입력 영역 병렬 배치 */
