@@ -41,6 +41,7 @@ h2.border {
     padding: 12px;
     margin-top: 30px;
     background-color: #81da9c;
+    border-radius: 5px;
 }
  
  
@@ -74,7 +75,7 @@ a:active {
     max-width: 900px;        /* 박스의 최대 너비 제한 */
     margin: 40px auto;       /* 위아래 40px 여백, 좌우 auto로 설정하여 화면 가운데 정렬 */
     padding: 30px;           /* 내부 패딩을 주어 안쪽 콘텐츠가 답답해 보이지 않게 함 */
-    background-color: #ffffff; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
+    background-color: #fffdff; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
     border-radius: 12px;     /* 모서리를 둥글게 처리 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
 }
@@ -370,6 +371,7 @@ nav ul {
 nav a {
     padding: 10px;
     border-radius: 3px;
+    border: 1px solid #333333
 }
  
 nav a:hover {
