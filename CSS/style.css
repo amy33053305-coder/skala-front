@@ -3,23 +3,23 @@
   font-weight: 400;
   font-style: normal;
 }
-
+ 
 /* ===========================
    3. 전체 스타일
 =========================== */
-
+ 
 body {
     line-height: 1.8;              /* 줄 간격 */
     color: #333333;                /* 기본 글자색 */
     background-color: #f5f7fa;     /* 배경색 */
     margin: 20px;
 }
-
-
+ 
+ 
 /* ===========================
    4. 제목 스타일
 =========================== */
-
+ 
 h1 {
     color: #2d2323;
     font-size: 2.5rem;
@@ -27,14 +27,14 @@ h1 {
     text-align: center;
     border-bottom: 2px solid #1e293b;
 }
-
+ 
 h2 {
     color: #1e3a8a;
     font-size: 1.8rem;
     padding: 12px;
     margin-top: 30px;
 }
-
+ 
 h2.border {
     color: #1e3a8a;
     font-size: 1.8rem;
@@ -42,31 +42,31 @@ h2.border {
     margin-top: 30px;
     background-color: #81da9c;
 }
-
-
+ 
+ 
 /* ===========================
    5. 링크 스타일
 =========================== */
-
+ 
 a {
     color: #2563eb;
     text-decoration: none;
     font-weight: 600;
 }
-
+ 
 a:hover {
     color: #dc2626;
     text-decoration: underline;
 }
-
+ 
 a:visited {
     color: #7c3aed;
 }
-
+ 
 a:active {
     color: #f97316;
 }
-
+ 
 /* ===========================
    6. 컨테이너 스타일 (가운데 정렬 및 박스 배치)
 =========================== */
@@ -87,7 +87,7 @@ a:active {
     gap: 20px; /* 카드 사이 간격 */
     margin: 20px 0;
 }
-
+ 
 .trip-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;   /* 연한 회색 테두리 */
@@ -96,18 +96,18 @@ a:active {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 카드 그림자 */
     transition: transform 0.2s ease, box-shadow 0.2s ease; /* 마우스 호버 효과 부드럽게 */
 }
-
+ 
 .trip-card:hover {
     transform: translateY(-5px); /* 마우스 올렸을 때 살짝 뜨는 효과 */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
+ 
 .trip-card img {
     width: 100%;                 /* 카드 가로폭에 꽉 차게 이미지 설정 */
     height: 200px;               /* 이미지 높이 통일 */
     object-fit: cover;           /* 비율 유지하며 카드 크기에 맞게 채움 */
 }
-
+ 
 .trip-desc {
     padding: 15px;               /* 텍스트 내부 여백 */
     margin: 0;
@@ -117,12 +117,12 @@ a:active {
     color: #475569;
     background-color: #fafbfd;
 }
-
+ 
 .audio-player {
     text-align: center;
     margin: 15px 0;
 }
-
+ 
 .video-container {
     text-align: left;
     margin: 15px 0;
@@ -139,7 +139,7 @@ a:active {
     border-radius: 8px;
     overflow: hidden; /* 테이블 모서리 둥글게 적용하기 위함 */
 }
-
+ 
 .timetable th {
     background-color: #81da9c;   /* 메인 블루 컬러 헤더 */
     color: #ffffff;              /* 헤더 텍스트 흰색 */
@@ -148,14 +148,14 @@ a:active {
     text-transform: uppercase;
     border: 1px solid #6fb681;
 }
-
+ 
 .timetable td {
     padding: 12px 8px;
     border: 1px solid #e2e8f0;   /* 은은하고 연한 회색 그리드 선 */
     text-align: center;
     line-height: 1.4;
 }
-
+ 
 /* 시간 열 특수 스타일 */
 .time-col {
     background-color: #f8fafc;
@@ -163,7 +163,7 @@ a:active {
     color: #64748b;
     width: 15%;
 }
-
+ 
 /* 수업 과목 셀 스타일 */
 .subject {
     background-color: #f1f5f9;   /* 과목 배경 연한 회색톤으로 가독성 확보 */
@@ -171,13 +171,13 @@ a:active {
     font-weight: 500;
     transition: background-color 0.2s ease;
 }
-
+ 
 /* 마우스를 올렸을 때 강조 효과 */
 .subject:hover {
     background-color: #dbeafe;   /* 마우스 올리면 파란색 하이라이트 */
     color: #1e40af;
 }
-
+ 
 /* 점심시간 전용 스타일 */
 .lunch-break {
     background-color: #fef08a !important; /* 부드러운 파스텔톤 노란색 */
@@ -188,14 +188,14 @@ a:active {
 /* ===========================
    9. 가독성 높은 회원가입 폼 스타일
 =========================== */
-
+ 
 /* 폼 웰컴 메시지 */
 .signup-welcome {
     text-align: center;
     color: #64748b;
     margin-bottom: 20px;
 }
-
+ 
 /* 폼 행 레이아웃 구성 */
 .form-row {
     margin-bottom: 18px;
@@ -203,19 +203,19 @@ a:active {
     flex-direction: column; /* 라벨을 위로, 입력창을 아래로 배치하여 가독성 증대 */
     align-items: flex-start;
 }
-
+ 
 .form-row label, .label-mock {
     font-weight: 600;
     color: #334155;
     margin-bottom: 6px;
     font-size: 0.95rem;
 }
-
+ 
 .required {
     color: #ef4444; /* 필수 입력 아이콘 빨간색 표시 */
     font-weight: normal;
 }
-
+ 
 /* -------------------------------------------
    1) 입력창 크기 키우기 및 기본 스타일 유지 (포커스 여부와 상관없이 항상 적용)
    ------------------------------------------- */
@@ -233,7 +233,7 @@ a:active {
     box-sizing: border-box;      /* 패딩과 테두리가 너비에 포함되도록 고정 */
     transition: border-color 0.2s, box-shadow 0.2s; /* 부드러운 변화 효과 */
 }
-
+ 
 /* -------------------------------------------
    입력창 포커스 시 부드러운 하이라이트 효과 (선택 사항)
    ------------------------------------------- */
@@ -248,7 +248,7 @@ a:active {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 블루 네온 효과 */
     color: black;
 }
-
+ 
 /* 이메일 입력 영역 병렬 배치 */
 .email-input-group {
     display: flex;
@@ -256,17 +256,17 @@ a:active {
     width: 100%;
     gap: 8px;
 }
-
+ 
 .email-input-group input,
 .email-input-group select {
     flex: 1;
 }
-
+ 
 .at {
     color: #64748b;
     font-weight: bold;
 }
-
+ 
 /* 입력창 포커스 스타일 */
 .signup-form input:focus,
 .signup-form select:focus,
@@ -276,7 +276,7 @@ a:active {
     background-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 네온 효과 */
 }
-
+ 
 /* 라디오 & 체크박스 간격 조절 */
 .radio-group, .checkbox-group {
     display: flex;
@@ -284,7 +284,7 @@ a:active {
     gap: 8px;
     padding: 5px 0;
 }
-
+ 
 .radio-label, .checkbox-label {
     display: flex;
     align-items: center;
@@ -292,7 +292,7 @@ a:active {
     font-weight: normal !important;
     cursor: pointer;
 }
-
+ 
 /* -------------------------------------------
    2) Fieldset 그룹 테두리 다듬기 (Borders)
    ------------------------------------------- */
@@ -303,14 +303,14 @@ a:active {
     margin-bottom: 25px;         /* 다른 입력 그룹과의 세로 거리 확보 */
     background-color: #ffffff;
 }
-
+ 
 .group-title {
     font-size: 1.15rem;
     font-weight: bold;
     color: #1e3a8a;              /* 메인 테마색상 적용 */
     padding: 0 10px;             /* 테두리 선과 글자가 겹치지 않게 좌우 여백 적용 */
 }
-
+ 
 /* -------------------------------------------
    3) 버튼 꾸미기 (Buttons styling)
    ------------------------------------------- */
@@ -319,7 +319,7 @@ a:active {
     gap: 12px;                   /* 버튼 사이의 간격 설정 */
     margin-top: 30px;
 }
-
+ 
 .btn {
     flex: 1;                     /* 두 버튼이 공간을 공평하게 절반씩 차지 */
     padding: 14px;               /* 시원하게 누를 수 있도록 위아래 패딩 증가 */
@@ -330,35 +330,35 @@ a:active {
     cursor: pointer;             /* 마우스를 올렸을 때 클릭 포인터 모양 변경 */
     transition: background-color 0.2s, transform 0.1s;
 }
-
+ 
 /* 가입 완료 버튼 (주요 행동 - Primary) */
 .btn-submit {
     background-color: #2563eb;
     color: #ffffff;
 }
-
+ 
 .btn-submit:hover {
     background-color: #1d4ed8;   /* 호버 시 조금 더 어두운 파란색으로 변환 */
 }
-
+ 
 .btn-submit:active {
     transform: scale(0.98);      /* 클릭하는 순간 살짝 눌리는 물리적 피드백 제공 */
 }
-
+ 
 /* 다시 작성 버튼 (보조 행동 - Secondary) */
 .btn-reset {
     background-color: #e2e8f0;
     color: #475569;
 }
-
+ 
 .btn-reset:hover {
     background-color: #cbd5e1;   /* 호버 시 한 톤 어두운 회색으로 피드백 제공 */
 }
-
+ 
 .btn-reset:active {
     transform: scale(0.98);
 }
-
+ 
 nav ul {
     display: flex;
     flex-direction: row;
@@ -366,16 +366,16 @@ nav ul {
     padding: 0;
     list-style: none;
 }
-
+ 
 nav a {
     padding: 10px;
     border-radius: 3px;
 }
-
+ 
 nav a:hover {
     background-color: rgb(245, 170, 156);
 }
-
+ 
 /* ===========================
    10. Flexbox 네비게이션 레이아웃
 =========================== */
@@ -390,7 +390,7 @@ nav a:hover {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
+ 
 /* ===========================
    11. 2단 분할 레이아웃 (Main & Aside)
 =========================== */
@@ -400,11 +400,11 @@ nav a:hover {
     align-items: flex-start;        /* 콘텐츠 높이가 달라도 위쪽 기준으로 정렬 */
     margin-top: 20px;
 }
-
+ 
 .main-content {
     flex: 7;                        /* 전체 너비 중 약 70% 차지 */
 }
-
+ 
 .sidebar-content {
     flex: 3;                        /* 전체 너비 중 약 30% 차지 */
     background-color: #f8fafc;      /* 사이드바 영역을 눈에 띄게 약한 배경색 적용 */
@@ -412,7 +412,7 @@ nav a:hover {
     padding-top: 0;
     border-radius: 8px;
 }
-
+ 
 /* ===========================
    12. 여행지 카드 3열 Grid 레이아웃
 =========================== */
@@ -423,18 +423,18 @@ nav a:hover {
     gap: 20px; /* 카드 상하좌우 간격 */
     margin: 30px 0;
 }
-
+ 
 /* 카드가 3열에 맞춰지므로 이미지 너비도 100%로 설정되어야 안 깨집니다 */
 .trip-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
-
+ 
 .border-bottom-yellow {
     border-bottom: 2px solid #fef08a;
 }
-
+ 
 .border-left {
     border-left: 2px solid rgb(125, 238, 125);
     background-color: azure;
@@ -442,7 +442,7 @@ nav a:hover {
 /* ===================================================
    13. 반응형 웹 디자인 (786px 이하 모바일 기기 대응)
 =================================================== */
-
+ 
 @media (max-width: 786px) {
     
     /* -------------------------------------------
@@ -454,14 +454,14 @@ nav a:hover {
         flex-direction: column;    /* 가로(row) 배치를 세로(column) 배치로 변경 */
         gap: 20px;                 /* 간격 소폭 축소 */
     }
-
+ 
     /* 메인 콘텐츠와 사이드바가 가로폭을 100% 꽉 채우도록 설정 */
     .main-content, 
     .sidebar-content {
         flex: none;                /* 기존의 7:3 비율 분할 제거 */
         width: 100%;               /* 부모 너비에 꽉 차게 조절 */
     }
-
+ 
     /* 바로가기 메뉴 리스트를 세로 1열로 배치 */
     .flex-nav ul {
         flex-direction: column;    /* 가로 배치를 세로 방향으로 변경 */
@@ -469,23 +469,23 @@ nav a:hover {
         gap: 10px;                 /* 메뉴 아이템 사이의 간격 */
         padding: 10px;
     }
-
+ 
     /* 각 메뉴 항목 스타일 조정 */
     .flex-nav li {
         text-align: center;
         border-bottom: 1px dashed #e2e8f0; /* 메뉴 항목 사이에 연한 점선 추가 */
     }
-
+ 
     .flex-nav li:last-child {
         border-bottom: none;       /* 마지막 메뉴는 밑줄 제거 */
     }
-
+ 
     .flex-nav li a {
         display: block;            /* 클릭 영역을 가로 전체로 확장 */
         padding: 10px 0;
     }
-
-
+ 
+ 
     /* -------------------------------------------
        2) myTrip.html : 3열 Grid 배열을 1열로 조정
        ------------------------------------------- */
@@ -495,13 +495,13 @@ nav a:hover {
         grid-template-columns: 1fr; /* 3열(repeat(3, 1fr)) 구조를 단일 1열로 변경 */
         gap: 15px;                  /* 모바일 화면에 맞춰 카드 사이 여백을 좁힘 */
     }
-
+ 
     /* 모바일 가독성을 위해 카드 이미지 높이 소폭 조정 */
     .trip-card img {
         height: 220px;              /* 너무 길거나 작지 않게 적절한 높이 설정 */
     }
 }
-
+ 
 .game-area {
     display: grid;
     grid-row: 2;
@@ -513,22 +513,64 @@ nav a:hover {
     border-color: #475569;
     text-align: center;
 }
-
+ 
 /* ===========================
    14. 실시간 날씨 위젯 스타일
 =========================== */
+.location-search {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+ 
+.location-search input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+ 
+.location-search input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+ 
+.location-search button {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+ 
+#current-location-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+ 
+#current-location-box p {
+    margin: 4px 0;
+}
+ 
 .weather-area {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
+ 
 .weather-select-label {
     font-weight: 600;
     color: #334155;
     font-size: 0.9rem;
 }
-
+ 
 .weather-select {
     padding: 8px 10px;
     border: 1px solid #cbd5e1;
@@ -537,7 +579,7 @@ nav a:hover {
     font-size: 0.95rem;
     margin-bottom: 10px;
 }
-
+ 
 #weather-box {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -546,21 +588,21 @@ nav a:hover {
     font-size: 0.95rem;
     line-height: 1.6;
 }
-
+ 
 #weather-box p {
     margin: 4px 0;
 }
-
+ 
 .weather-loading {
     color: #64748b;
     font-style: italic;
 }
-
+ 
 .weather-result {
     font-weight: bold;
     color: #1e3a8a;
 }
-
+ 
 .weather-error {
     color: #dc2626;
     font-weight: 600;
