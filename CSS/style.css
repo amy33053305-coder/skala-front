@@ -159,8 +159,16 @@ a:active {
 /* ===========================
    8. 시간표 (Table) 스타일
 =========================== */
+/* 화면이 좁아 표가 다 들어가지 않을 때 표만 가로 스크롤 되도록 감싸는 래퍼 */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .timetable {
     width: 100%;
+    min-width: 560px;          /* 좁은 화면에서 셀이 과도하게 찌그러지지 않도록 최소 너비 확보 */
     border-collapse: collapse; /* 테이블 셀 사이의 이중 테두리 제거 */
     margin-top: 20px;
     font-size: 0.95rem;
@@ -420,6 +428,39 @@ nav a.current:hover {
     transform: none;
     box-shadow: none;
 }
+
+/* 목록 버튼(드롭다운) - 나머지 메뉴 항목을 hover 시에만 펼쳐서 보여줌 */
+nav li.dropdown {
+    position: relative;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0 0;
+    padding: 10px;
+    background-color: #fdf8ec;
+    border: 1px solid #f1af3b;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    min-width: 140px;
+    z-index: 20;
+}
+
+nav li.dropdown:hover .dropdown-menu,
+nav li.dropdown:focus-within .dropdown-menu {
+    display: flex;
+}
+
+nav .dropdown-menu a {
+    display: block;
+    text-align: center;
+}
  
 /* ===========================
    10. Flexbox 네비게이션 레이아웃
@@ -522,11 +563,53 @@ nav a.current:hover {
 =================================================== */
  
 @media (max-width: 786px) {
-    
+
+    /* -------------------------------------------
+       0) 공통 : 좁은 화면에서 여백을 줄여 콘텐츠 폭 확보
+       ------------------------------------------- */
+    body {
+        margin: 10px;               /* 데스크톱용 20px 여백은 모바일에서 콘텐츠를 과도하게 좁힘 */
+    }
+
+    .container {
+        margin: 15px auto;
+        padding: 16px;               /* 40px → 16px로 축소해 실제 콘텐츠 영역을 확보 */
+    }
+
+    h1 {
+        font-size: 1.8rem;           /* 좁은 화면에서 제목이 줄바꿈되며 차지하는 세로 공간을 줄임 */
+        padding: 12px;
+    }
+
+    /* 상단 공통 네비게이션(Home + 바로가기)이 한 줄에 다 들어가지 않으면 줄바꿈 */
+    .site-nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 10px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* 미니게임 모달 내부 여백을 줄여 좁은 화면에서도 보드/미로가 최대한 들어가도록 함 */
+    .trip-modal {
+        padding: 10px;
+    }
+
+    .trip-modal-content {
+        padding: 16px;
+    }
+
     /* -------------------------------------------
        1) Index.html : 본문/사이드바 및 메뉴 1열 정렬
        ------------------------------------------- */
-    
+
     /* 2단 분할 레이아웃을 세로 1열 구조로 변경 */
     .layout-wrapper {
         flex-direction: column;    /* 가로(row) 배치를 세로(column) 배치로 변경 */
@@ -585,18 +668,60 @@ nav a.current:hover {
         height: 220px;              /* 너무 길거나 작지 않게 적절한 높이 설정 */
         min-height: 0;
     }
+
+    /* 미니게임 버튼: 좁은 화면에서는 2열로 배치 */
+    .game-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
- 
-.game-area {
+
+/* ===================================================
+   13-1. 소형 모바일(480px 이하) 추가 대응
+=================================================== */
+@media (max-width: 480px) {
+
+    /* 미니게임 버튼: 폭이 더 좁아지면 1열로 쌓아 텍스트가 잘리지 않도록 함 */
+    .game-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    /* 날씨 조회 입력 영역: 한 줄에 다 들어가지 않으므로 세로로 쌓음 */
+    .location-search {
+        flex-wrap: wrap;
+    }
+
+    .location-search input[type="text"] {
+        flex: 1 1 100%;
+    }
+
+    .location-search .weather-select {
+        flex: 1;
+        width: auto;
+    }
+
+    .location-search button {
+        flex: 1;
+    }
+
+    /* 이메일 입력 영역도 도메인 선택까지 한 줄에 넣기 빠듯하므로 줄바꿈 허용 */
+    .email-input-group {
+        flex-wrap: wrap;
+    }
+}
+
+.game-buttons {
     display: grid;
-    grid-row: 2;
-    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
 }
-.game-area button {
-    margin:5px;
+.game-buttons button {
+    margin: 0;
+    padding: 12px 10px;
     border-radius: 5px;
     border-color: #7b2e0d;
     text-align: center;
+    width: 100%;
 }
  
 /* ===========================
@@ -823,6 +948,11 @@ nav a.current:hover {
 .game-modal-content {
     max-width: 640px;
     text-align: center;
+}
+
+#gameModalBody {
+    overflow-x: auto;          /* 미로/보드가 모달 폭보다 넓어도 잘리지 않고 스크롤되도록 보장 */
+    -webkit-overflow-scrolling: touch;
 }
 
 .game-instructions {
