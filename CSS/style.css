@@ -1,5 +1,11 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.css');
 
+.yeon-sung-regular {
+  font-family: "Yeon Sung", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .site-font {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   font-weight: 400;
@@ -23,26 +29,26 @@ body {
 =========================== */
  
 h1 {
-    color: #2d2323;
+    color: #7b2e0d;
     font-size: 2.5rem;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #1e293b;
+    border-bottom: 2px solid #d5641b;
 }
- 
+
 h2 {
-    color: #1e3a8a;
+    color: #9e3b13;
     font-size: 1.8rem;
     padding: 12px;
     margin-top: 30px;
 }
- 
+
 h2.border {
-    color: #1e3a8a;
+    color: #7b2e0d;
     font-size: 1.8rem;
     padding: 12px;
     margin-top: 30px;
-    background-color: #81da9c;
+    background-color: #f1c45d;
     border-radius: 5px;
 }
  
@@ -52,22 +58,22 @@ h2.border {
 =========================== */
  
 a {
-    color: #2563eb;
+    color: #d5641b;
     text-decoration: none;
     font-weight: 600;
 }
- 
+
 a:hover {
-    color: #dc2626;
+    color: #c04617;
     text-decoration: underline;
 }
- 
+
 a:visited {
-    color: #7c3aed;
+    color: #9e3b13;
 }
- 
+
 a:active {
-    color: #f97316;
+    color: #f19724;
 }
  
 /* ===========================
@@ -77,7 +83,7 @@ a:active {
     max-width: 900px;        /* 박스의 최대 너비 제한 */
     margin: 40px auto;       /* 위아래 40px 여백, 좌우 auto로 설정하여 화면 가운데 정렬 */
     padding: 40px;           /* 내부 패딩을 넓혀 여백감을 강조 */
-    background-color: #faf8fa; /* 컨테이너 배경색을 흰색으로 하여 body 배경과 대비 */
+    background-color: #fdf8ec; /* 팔레트의 가장 밝은 톤을 아주 옅게 우려낸 배경색 */
     border-radius: 12px;     /* 모서리를 둥글게 처리 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 효과 */
 }
@@ -103,7 +109,7 @@ a:active {
  
 .trip-card {
     background-color: #ffffff;
-    border: 1px solid #e2e8f0;   /* 연한 회색 테두리 */
+    border: 1px solid #f2d97c;   /* 연한 골드 테두리 */
     border-radius: 8px;          /* 모서리 둥글게 */
     overflow: hidden;            /* 이미지가 둥근 모서리 밖으로 나가지 않도록 설정 */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 카드 그림자 */
@@ -137,8 +143,8 @@ a:active {
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center;
-    color: #475569;
-    background-color: #fafbfd;
+    color: #7b2e0d;
+    background-color: #fdf8ec;
 }
  
 .audio-player {
@@ -164,47 +170,47 @@ a:active {
 }
  
 .timetable th {
-    background-color: #81da9c;   /* 메인 블루 컬러 헤더 */
+    background-color: #e77e1f;   /* 메인 오렌지 컬러 헤더 */
     color: #ffffff;              /* 헤더 텍스트 흰색 */
     font-weight: bold;
     padding: 12px 10px;
     text-transform: uppercase;
-    border: 1px solid #6fb681;
+    border: 1px solid #d5641b;
 }
- 
+
 .timetable td {
     padding: 12px 8px;
-    border: 1px solid #e2e8f0;   /* 은은하고 연한 회색 그리드 선 */
+    border: 1px solid #f2d97c;   /* 은은하고 연한 골드 그리드 선 */
     text-align: center;
     line-height: 1.4;
 }
- 
+
 /* 시간 열 특수 스타일 */
 .time-col {
-    background-color: #f8fafc;
+    background-color: #fdf8ec;
     font-weight: 600;
-    color: #64748b;
+    color: #9e3b13;
     width: 15%;
 }
- 
+
 /* 수업 과목 셀 스타일 */
 .subject {
-    background-color: #f1f5f9;   /* 과목 배경 연한 회색톤으로 가독성 확보 */
-    color: #1e293b;
+    background-color: #f5e9a5;   /* 과목 배경 연한 골드톤으로 가독성 확보 */
+    color: #7b2e0d;
     font-weight: 500;
     transition: background-color 0.2s ease;
 }
- 
+
 /* 마우스를 올렸을 때 강조 효과 */
 .subject:hover {
-    background-color: #dbeafe;   /* 마우스 올리면 파란색 하이라이트 */
-    color: #1e40af;
+    background-color: #f1c45d;   /* 마우스 올리면 진한 골드 하이라이트 */
+    color: #7b2e0d;
 }
- 
+
 /* 점심시간 전용 스타일 */
 .lunch-break {
-    background-color: #fef08a !important; /* 부드러운 파스텔톤 노란색 */
-    color: #854d0e;
+    background-color: #f1af3b !important; /* 팔레트의 진한 앰버 색상 */
+    color: #7b2e0d;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -215,7 +221,7 @@ a:active {
 /* 폼 웰컴 메시지 */
 .signup-welcome {
     text-align: center;
-    color: #64748b;
+    color: #9e3b13;
     margin-bottom: 20px;
 }
  
@@ -229,13 +235,13 @@ a:active {
  
 .form-row label, .label-mock {
     font-weight: 600;
-    color: #334155;
+    color: #7b2e0d;
     margin-bottom: 6px;
     font-size: 0.95rem;
 }
- 
+
 .required {
-    color: #ef4444; /* 필수 입력 아이콘 빨간색 표시 */
+    color: #c04617; /* 필수 입력 아이콘 강조 표시 */
     font-weight: normal;
 }
  
@@ -250,9 +256,9 @@ a:active {
     width: 100%;
     padding: 10px 14px;          /* 안쪽 여백을 넓혀 시각적 안정감 부여 */
     font-size: 1rem;             /* 글자 크기 조정 */
-    border: 1px solid #cbd5e1;   /* 스크린샷과 같은 은은한 회색 테두리 */
+    border: 1px solid #f1c45d;   /* 은은한 골드 테두리 */
     border-radius: 6px;          /* 모서리를 부드럽게 둥글게 가공 */
-    background-color: #f8fafc;   /* 중요: 포커스 전에도 항상 유지되는 연한 회색 배경 */
+    background-color: #fdf8ec;   /* 중요: 포커스 전에도 항상 유지되는 연한 배경 */
     box-sizing: border-box;      /* 패딩과 테두리가 너비에 포함되도록 고정 */
     transition: border-color 0.2s, box-shadow 0.2s; /* 부드러운 변화 효과 */
 }
@@ -271,12 +277,12 @@ a:active {
 .signup-form select:focus,
 .signup-form textarea:focus {
     outline: none;
-    border-color: #2563eb;       /* 클릭 시에만 파란색 테두리로 강조 */
+    border-color: #d5641b;       /* 클릭 시에만 오렌지 테두리로 강조 */
     background-color: #ffffff;   /* 클릭 시에만 배경을 흰색으로 전환 */
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* 부드러운 블루 네온 효과 */
+    box-shadow: 0 0 0 3px rgba(213, 100, 27, 0.15); /* 부드러운 오렌지 네온 효과 */
     color: black;
 }
- 
+
 /* 이메일 입력 영역 병렬 배치 */
 .email-input-group {
     display: flex;
@@ -291,7 +297,7 @@ a:active {
 }
  
 .at {
-    color: #64748b;
+    color: #9e3b13;
     font-weight: bold;
 }
  
@@ -315,17 +321,17 @@ a:active {
    2) Fieldset 그룹 테두리 다듬기 (Borders)
    ------------------------------------------- */
 .form-group {
-    border: 1px solid #e2e8f0;   /* 딱딱하고 짙은 검은색 테두리를 연하고 깔끔한 회색선으로 교체 */
+    border: 1px solid #f2d97c;   /* 딱딱하고 짙은 검은색 테두리를 연하고 깔끔한 골드선으로 교체 */
     border-radius: 10px;         /* 그룹 전체의 모서리를 둥글게 깎아 부드러운 느낌 부여 */
     padding: 24px;               /* 그룹 내부 콘텐츠와 테두리 사이 충분한 여백 확보 */
     margin-bottom: 25px;         /* 다른 입력 그룹과의 세로 거리 확보 */
     background-color: #ffffff;
 }
- 
+
 .group-title {
     font-size: 1.15rem;
     font-weight: bold;
-    color: #1e3a8a;              /* 메인 테마색상 적용 */
+    color: #9e3b13;              /* 메인 테마색상 적용 */
     padding: 0 10px;             /* 테두리 선과 글자가 겹치지 않게 좌우 여백 적용 */
 }
  
@@ -351,28 +357,28 @@ a:active {
  
 /* 가입 완료 버튼 (주요 행동 - Primary) */
 .btn-submit {
-    background-color: #2563eb;
+    background-color: #d5641b;
     color: #ffffff;
     display: inline;
 }
- 
+
 .btn-submit:hover {
-    background-color: #1d4ed8;   /* 호버 시 조금 더 어두운 파란색으로 변환 */
+    background-color: #9e3b13;   /* 호버 시 조금 더 어두운 톤으로 변환 */
 }
- 
+
 .btn-submit:active {
     transform: scale(0.98);      /* 클릭하는 순간 살짝 눌리는 물리적 피드백 제공 */
     color: #000000;              /* 클릭 유지 시 글자색 검정으로 전환 (버튼 밖으로 벗어나면 :active 해제되어 자동 복원) */
 }
- 
+
 /* 다시 작성 버튼 (보조 행동 - Secondary) */
 .btn-reset {
-    background-color: #e2e8f0;
-    color: #475569;
+    background-color: #f2d97c;
+    color: #7b2e0d;
 }
- 
+
 .btn-reset:hover {
-    background-color: #cbd5e1;   /* 호버 시 한 톤 어두운 회색으로 피드백 제공 */
+    background-color: #f1c45d;   /* 호버 시 한 톤 진한 골드로 피드백 제공 */
 }
  
 .btn-reset:active {
@@ -390,27 +396,27 @@ nav ul {
 nav a {
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #c0d56e;
-    background-color: #d4e87a;
+    border: 1px solid #f1af3b;
+    background-color: #f1c45d;
     display: inline-block;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 nav a:hover {
-    background-color: rgb(245, 170, 156);
+    background-color: #e77e1f;
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 /* 현재 보고 있는 페이지의 메뉴 항목을 강조 표시 */
 nav a.current {
-    background-color: #1e3a8a;
-    border-color: #1e3a8a;
+    background-color: #9e3b13;
+    border-color: #9e3b13;
     color: #ffffff;
 }
 
 nav a.current:hover {
-    background-color: #1e3a8a;
+    background-color: #9e3b13;
     transform: none;
     box-shadow: none;
 }
@@ -424,8 +430,8 @@ nav a.current:hover {
     list-style-type: none;          /* 불릿(점) 기호 제거 */
     padding: 0;
     margin: 20px 0;
-    border-top: 2px solid #cbd5e1;  /* 이미지처럼 상하 구분선 추가 */
-    border-bottom: 2px solid #cbd5e1;
+    border-top: 2px solid #f1c45d;  /* 이미지처럼 상하 구분선 추가 */
+    border-bottom: 2px solid #f1c45d;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -485,7 +491,7 @@ nav a.current:hover {
 }
  
 .border-bottom-yellow {
-    border-bottom: 2px solid #fef08a;
+    border-bottom: 2px solid #f2d97c;
 }
  
 /* ===========================
@@ -507,8 +513,8 @@ nav a.current:hover {
 }
  
 .border-left {
-    border-left: 2px solid rgb(125, 238, 125);
-    background-color: azure;
+    border-left: 2px solid #f1af3b;
+    background-color: #fdf8ec;
     border-radius: 5px;
 }
 /* ===================================================
@@ -545,7 +551,7 @@ nav a.current:hover {
     /* 각 메뉴 항목 스타일 조정 */
     .flex-nav li {
         text-align: center;
-        border-bottom: 1px dashed #e2e8f0; /* 메뉴 항목 사이에 연한 점선 추가 */
+        border-bottom: 1px dashed #f2d97c; /* 메뉴 항목 사이에 연한 점선 추가 */
     }
  
     .flex-nav li:last-child {
@@ -589,7 +595,7 @@ nav a.current:hover {
 .game-area button {
     margin:5px;
     border-radius: 5px;
-    border-color: #475569;
+    border-color: #7b2e0d;
     text-align: center;
 }
  
@@ -605,18 +611,18 @@ nav a.current:hover {
 .location-search input[type="text"] {
     flex: 1;
     padding: 8px 10px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #f1c45d;
     border-radius: 6px;
-    background-color: #f8fafc;
+    background-color: #fdf8ec;
     font-size: 0.9rem;
     box-sizing: border-box;
 }
- 
+
 .location-search input[type="text"]:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #d5641b;
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 0 0 3px rgba(213, 100, 27, 0.15);
 }
  
 .location-search button {
@@ -624,66 +630,46 @@ nav a.current:hover {
     font-size: 0.9rem;
     border-radius: 6px;
 }
- 
+
+/* 자주 찾는 도시를 바로 조회할 수 있는 빠른 선택 화살표 (input과 조회 버튼 사이에 배치) */
+.location-search .weather-select {
+    flex: 0 0 auto;
+    width: 51px;
+    padding: 8px 4px;
+    text-align: center;
+    text-align-last: center;
+    border: 1px solid #f1c45d;
+    border-radius: 6px;
+    background-color: #fdf8ec;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
 #current-location-box {
     background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #f2d97c;
     border-radius: 8px;
     padding: 12px 14px;
     font-size: 0.95rem;
     line-height: 1.6;
 }
- 
+
 #current-location-box p {
     margin: 4px 0;
 }
- 
-.weather-area {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
- 
-.weather-select-label {
-    font-weight: 600;
-    color: #334155;
-    font-size: 0.9rem;
-}
- 
-.weather-select {
-    padding: 8px 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background-color: #f8fafc;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
- 
-#weather-box {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 14px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
- 
-#weather-box p {
-    margin: 4px 0;
-}
- 
+
 .weather-loading {
-    color: #64748b;
+    color: #9e3b13;
     font-style: italic;
 }
- 
+
 .weather-result {
     font-weight: bold;
-    color: #1e3a8a;
+    color: #9e3b13;
 }
- 
+
 .weather-error {
-    color: #dc2626;
+    color: #c04617;
     font-weight: 600;
 }
 
@@ -699,18 +685,18 @@ nav a.current:hover {
 
 .route-search input[type="text"] {
     padding: 8px 10px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #f1c45d;
     border-radius: 6px;
-    background-color: #f8fafc;
+    background-color: #fdf8ec;
     font-size: 0.9rem;
     box-sizing: border-box;
 }
 
 .route-search input[type="text"]:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #d5641b;
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 0 0 3px rgba(213, 100, 27, 0.15);
 }
 
 .route-search button {
@@ -721,7 +707,7 @@ nav a.current:hover {
 
 #route-box {
     background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #f2d97c;
     border-radius: 8px;
     padding: 14px;
     font-size: 0.95rem;
@@ -734,10 +720,10 @@ nav a.current:hover {
 
 .home-btn {
     display: inline-block;
-    background-color: #e7a24d;
+    background-color: #f19724;
     padding: 6px 12px;
     border-radius: 5px;
-    border: 1px solid #d68a3d;
+    border: 1px solid #d5641b;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -752,9 +738,9 @@ nav a.current:hover {
 .site-footer {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 2px solid #e2e8f0;
+    border-top: 2px solid #f2d97c;
     text-align: center;
-    color: #64748b;
+    color: #9e3b13;
     font-size: 0.9rem;
 }
 
@@ -770,7 +756,7 @@ nav a.current:hover {
     display: none;                      /* 평소에는 숨겨두고 JS로 열고 닫음 */
     position: fixed;
     inset: 0;
-    background-color: rgba(15, 23, 42, 0.7);
+    background-color: rgba(123, 46, 13, 0.7);
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -802,13 +788,13 @@ nav a.current:hover {
 }
 
 .trip-modal-content h3 {
-    color: #1e3a8a;
+    color: #9e3b13;
     font-size: 1.4rem;
     margin: 0 0 10px;
 }
 
 .trip-modal-content p {
-    color: #334155;
+    color: #7b2e0d;
     line-height: 1.7;
 }
 
@@ -820,13 +806,138 @@ nav a.current:hover {
     height: 32px;
     border: none;
     border-radius: 50%;
-    background-color: #f1f5f9;
-    color: #334155;
+    background-color: #f5e9a5;
+    color: #7b2e0d;
     font-size: 1.3rem;
     line-height: 1;
     cursor: pointer;
 }
 
 .trip-modal-close:hover {
-    background-color: #e2e8f0;
+    background-color: #f1c45d;
+}
+
+/* ===========================
+   18. 미니게임 모달 (공룡 게임 / 지뢰찾기 / 팩맨)
+=========================== */
+.game-modal-content {
+    max-width: 640px;
+    text-align: center;
+}
+
+.game-instructions {
+    color: #7b2e0d;
+    font-size: 0.9rem;
+    margin: 0 0 10px;
+    line-height: 1.6;
+}
+
+.game-status {
+    font-weight: bold;
+    color: #9e3b13;
+    margin: 0 0 12px;
+}
+
+.game-restart-btn {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+/* ---- 구글 공룡 게임 ---- */
+#dinoCanvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #f1c45d;
+    border-radius: 6px;
+    background-color: #fdf8ec;
+    cursor: pointer;
+}
+
+/* ---- 지뢰찾기 ---- */
+.minesweeper-board {
+    display: grid;
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.minesweeper-cell {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #f1c45d;
+    border-radius: 3px;
+    background-color: #f5e9a5;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #7b2e0d;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.minesweeper-cell.is-revealed {
+    background-color: #fdf8ec;
+    cursor: default;
+}
+
+.minesweeper-cell.is-mine {
+    background-color: #c04617;
+    color: #ffffff;
+}
+
+/* ---- 팩맨 ---- */
+.pacman-maze {
+    position: relative;
+    margin: 0 auto;
+    background-color: #7b2e0d;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.pacman-cell {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    background-color: #2a1006;
+}
+
+.pacman-cell.is-wall {
+    background-color: #7b2e0d;
+    border: 1px solid #9e3b13;
+}
+
+.pacman-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f1c45d;
+    transform: translate(-50%, -50%);
+}
+
+.pacman-player,
+.pacman-ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: transform 0.18s linear;
+}
+
+.pacman-player {
+    background-color: #f1af3b;
+}
+
+.pacman-ghost {
+    background-color: #e77e1f;
 }

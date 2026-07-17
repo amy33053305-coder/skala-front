@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+    </style>
 </head>
-<body class="site-font">
+<body class="yeon-sung-regular">
 
     <div class="container">
         <div class="site-nav">
@@ -25,8 +28,8 @@
         <p class="signup-welcome">SKALA-FRONT 회원가입을 환영합니다.</p>
         <hr>
         
-        <form class="signup-form">
-            
+        <form class="signup-form" onsubmit="submitComplete()">
+
             <fieldset class="form-group">
                 <legend class="group-title">계정 정보</legend>
                 <div class="form-row">
@@ -103,6 +106,10 @@
             <p>&copy; 2026 김영민의 포트폴리오.</p>
         </footer>
     </div>
-
+    <script>
+        function submitComplete(){
+            alert("🎉 회원가입이 완료되었습니다.")
+        }
+    </script>
 </body>
 </html>
