@@ -15,16 +15,22 @@
             <a href="./index.html" class="home-btn">🏠 Home</a>
             <nav>
                 <ul>
-                    <li><a href="./myProfile.html">👨 소개</a></li>
                     <li><a href="./myClass.html" class="current">🗓️ 시간표</a></li>
-                    <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
-                    <li><a href="./myTrip.html">🛫 앨범</a></li>
-                    <li><a href="./signUp.html">👤 가입</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">☰ 목록</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./myProfile.html">👨 소개</a></li>
+                            <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
+                            <li><a href="./myTrip.html">🛫 앨범</a></li>
+                            <li><a href="./signUp.html">👤 가입</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
         <h1>🗓️ 나의 강의 시간표</h1>
         
+        <div class="table-scroll">
         <table class="timetable">
             <thead>
                 <tr>
@@ -84,6 +90,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
 
         <footer class="site-footer">
             <address>

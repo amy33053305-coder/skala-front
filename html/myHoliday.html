@@ -15,31 +15,37 @@
             <a href="./index.html" class="home-btn">🏠 Home</a>
             <nav>
                 <ul>
-                    <li><a href="./myProfile.html">👨 소개</a></li>
-                    <li><a href="./myClass.html">🗓️ 시간표</a></li>
                     <li><a href="./myHoliday.html" class="current">🏖️ 휴일</a></li>
-                    <li><a href="./myTrip.html">🛫 앨범</a></li>
-                    <li><a href="./signUp.html">👤 가입</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">☰ 목록</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./myProfile.html">👨 소개</a></li>
+                            <li><a href="./myClass.html">🗓️ 시간표</a></li>
+                            <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
+                            <li><a href="./myTrip.html">🛫 앨범</a></li>
+                            <li><a href="./signUp.html">👤 가입</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
         <h1>🎉 나의 휴일 일과</h1>
         <br><br>
-        <div class="scroll-reveal">
+        <div>
             <h2 class="border">🛌 <ins>느긋한 아침</ins></h2>
             <p><strong>09:00</strong> - 😴 늦잠 자는 행복</p>
             <p><strong>10:00</strong> - 🥯 여유 있게 <mark>브런치</mark> 즐기기</p>
             <p><strong>11:00</strong> - ☕️ 커피 한 잔과 <strong>취미 활동</strong> 🔫</p>
         </div>
         <br><br>
-        <div class="scroll-reveal">
+        <div>
             <h2 class="border">🏄🏻‍♂️ <ins>오후 활동</ins></h2>
             <p><strong>13:00</strong> - 🐶 강아지와 함께 공원 산책하기</p>
             <p><strong>14:30</strong> - 🏋️ 운동을 하며 <strong>건강 관리</strong></p>
             <p><strong>16:00</strong> - 🛍️ 충동구매 대신 <mark>창의적인 쇼핑</mark></p>
         </div>
         <br><br>
-        <div class="scroll-reveal">
+        <div>
             <h2 class="border">🎥 <ins>저녁과 밤</ins></h2>
             <p><strong>18:00</strong> - 🥘 <b>맛있는 저녁</b> 만들기</p>
             <p><strong>20:00</strong> - 🎞️ 영화 감상</p>
@@ -56,6 +62,5 @@
             <p>&copy; 2026 김영민의 포트폴리오.</p>
         </footer>
     </div>
-    <script src="../javascript/scrollReveal.js"></script>
 </body>
 </html>
