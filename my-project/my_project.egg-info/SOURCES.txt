@@ -1,0 +1,10 @@
+pyproject.toml
+my_project.egg-info/PKG-INFO
+my_project.egg-info/SOURCES.txt
+my_project.egg-info/dependency_links.txt
+my_project.egg-info/top_level.txt
+pipeline/__init__.py
+pipeline/fetch.py
+pipeline/models.py
+pipeline/storage.py
+tests/test_models.py
