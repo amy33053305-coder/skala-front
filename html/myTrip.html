@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 여행 앨범</title>
     <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+    </style>
 </head>
-<body class="site-font">
+<body class="yeon-sung-regular">
     <div class="container">
         <div class="site-nav">
             <a href="./index.html" class="home-btn">🏠 Home</a>
             <nav>
                 <ul>
-                    <li><a href="./myProfile.html">👨 소개</a></li>
-                    <li><a href="./myClass.html">🗓️ 시간표</a></li>
-                    <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
                     <li><a href="./myTrip.html" class="current">🛫 앨범</a></li>
-                    <li><a href="./signUp.html">👤 가입</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">☰ 목록</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./myProfile.html">👨 소개</a></li>
+                            <li><a href="./myClass.html">🗓️ 시간표</a></li>
+                            <li><a href="./myHoliday.html">🏖️ 휴일</a></li>
+                            <li><a href="./signUp.html">👤 가입</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -34,22 +42,22 @@
         <h2 class="border">🇵🇭 필리핀 여행 (2015년)</h2>
         <div class="trip-grid">
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAzMjRfOSAg%2FMDAxNzQyODA4MDgzMjAz.IHU7njELH8zKXZ6xkTia46AWJ6Hnx-ojc-CfxPgLrc0g.ZyF_pODAizS_gD7mRzQJlvdyurVBg2OsW1rDEEpc1cgg.PNG%2Fimage.png&type=a340" alt="필리핀 마닐라" data-desc="필리핀의 수도 마닐라는 스페인 식민지 시대의 흔적이 남은 '인트라무로스'와 현대적인 쇼핑·엔터테인먼트 시설이 공존하는 도시입니다. 호세 리잘을 기리는 리잘 공원 등 역사와 현대가 어우러진 명소가 가득합니다.">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAzMjRfOSAg%2FMDAxNzQyODA4MDgzMjAz.IHU7njELH8zKXZ6xkTia46AWJ6Hnx-ojc-CfxPgLrc0g.ZyF_pODAizS_gD7mRzQJlvdyurVBg2OsW1rDEEpc1cgg.PNG%2Fimage.png&type=a340" alt="필리핀 마닐라" data-desc="마닐라에 친척이 있어 친척이 운영하는 콘도에 방문한 사진입니다. 오랜만에 만나 못다한 이야기를 하며, 건물 근처 수영장에서 시원하게 물놀이를 즐기고 낮에는 파라솔 아래에서 휴식을 취하며 힐링했어요.">
                 <p class="trip-desc">필리핀 마닐라</p>
             </div>
 
             <div class="trip-card">
-                <img src="../media/성당.jpeg" alt="마닐라 대성당" data-desc="인트라무로스 로마 광장에 자리한 마닐라 대성당은 1571년 처음 세워진 이후 지진과 화재로 여러 차례 재건되어 현재의 모습(1958년 완공)을 갖췄습니다. 1981년 교황 요한 바오로 2세에 의해 소 바실리카로 지정된 필리핀 가톨릭의 중심지입니다.">
+                <img src="../media/성당.jpeg" alt="마닐라 대성당" data-desc="리잘 공원에서부터 걸어서 인트라무로스 구시가지를 둘러보다 마지막으로 들른 곳이 마닐라 대성당이었어요. 안에 들어서자마자 쏟아지던 스테인드글라스 빛깔이 잊히지 않고, 필리핀 최대 규모라는 파이프 오르간 소리를 실제로 들으니 소름이 돋았습니다. 평일 오전에 가서 그런지 한적해서 여유롭게 구경하다 나왔어요.">
                 <p class="trip-desc">마닐라 대성당</p>
             </div>
 
             <div class="trip-card">
-                <img src="../media/보라카이.jpeg" alt="보라카이 해변" data-desc="보라카이 화이트비치는 4km에 걸친 새하얀 모래사장과 에메랄드빛 바다로 유명한 필리핀 최고의 휴양지입니다. 완만한 수심과 잔잔한 파도 덕분에 수영과 석양 감상을 즐기기에 이상적입니다.">
+                <img src="../media/보라카이.jpeg" alt="보라카이 해변" data-desc="말로만 듣던 화이트비치를 직접 밟아보니 왜 다들 보라카이를 최고로 꼽는지 알 것 같았어요. 고운 하얀 모래는 밟을 때마다 뽀득거리고 바다색은 사진보다 훨씬 더 선명한 에메랄드빛이었습니다. 파도가 잔잔해서 튜브 하나 들고 둥둥 떠 있기만 해도 시간 가는 줄 몰랐고, 노을 질 때쯤 비치 바에서 마신 칵테일 한 잔이 아직도 생각나요.">
                 <p class="trip-desc">보라카이 해변</p>
             </div>
 
             <div class="trip-card">
-                <img src="../media/보라카이 바다.jpeg" alt="보라카이 바닷속 스노클링" data-desc="보라카이 근해는 맑은 바닷물과 다채로운 산호초 덕분에 초보자도 쉽게 즐길 수 있는 스노클링 명소로 꼽힙니다. 방카(전통 배)를 타고 크리스탈 코브 등 인근 섬을 오가는 아일랜드 호핑 투어에서 다양한 해양 생물을 만날 수 있습니다.">
+                <img src="../media/보라카이 바다.jpeg" alt="보라카이 바닷속 스노클링" data-desc="방카 배를 타고 크리스탈 코브까지 가는 아일랜드 호핑 투어를 신청했는데, 파도에 배가 통통 튀면서 물이 좀 튀긴 했지만 그마저도 재미있는 추억이 됐어요. 물속에 들어가자마자 알록달록한 산호초와 물고기 떼가 눈앞에 펼쳐져서 스노클링이 처음인 저도 어렵지 않게 즐길 수 있었습니다.">
                 <p class="trip-desc">보라카이 스노클링</p>
             </div>
         </div>
@@ -59,22 +67,22 @@
         <h2 class="border">🇯🇵 일본 여행 (2026년)</h2>
         <div class="trip-grid">
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MjVfMTQw%2FMDAxNzE5Mjk4NzQ5Nzg2.yyPqv-ms2sQ-HaaiMIky-2fwVof38LP6S0p6AmtcwjAg.-WXojk47hp0ZRsZx2UAIvavVo1yvSCGrEvUude2UKOsg.JPEG%2F240_F_244312786_qu8X7ywYQokjjvZssbjGsPzkVXQiLBE2.jpg&type=a340" alt="도쿄 시부야" data-desc="시부야는 패션과 쇼핑, 최신 트렌드가 모이는 도쿄 제일의 번화가입니다. 시부야109 등 개성 강한 쇼핑 시설과 뛰어난 대중교통 접근성으로 도쿄 여행의 필수 코스로 꼽힙니다.">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MjVfMTQw%2FMDAxNzE5Mjk4NzQ5Nzg2.yyPqv-ms2sQ-HaaiMIky-2fwVof38LP6S0p6AmtcwjAg.-WXojk47hp0ZRsZx2UAIvavVo1yvSCGrEvUude2UKOsg.JPEG%2F240_F_244312786_qu8X7ywYQokjjvZssbjGsPzkVXQiLBE2.jpg&type=a340" alt="도쿄 시부야" data-desc="시부야역에 내리자마자 느껴지는 활기가 남달랐어요. 시부야109를 중심으로 골목마다 개성 있는 옷가게와 감각적인 카페가 가득해서 하루 종일 돌아다녀도 지루할 틈이 없었습니다. 사람은 정말 많았지만 그만큼 도쿄 최신 유행을 온몸으로 느낄 수 있는 곳이었어요.">
                 <p class="trip-desc">도쿄 시부야</p>
             </div>
 
             <div class="trip-card">
-                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAzMTZfMTc4%2FMDAxNzczNjUyMDI0MTYx.MIg3FsSWMB1t_i7NIPnV1_6yHx3lKnvDh3GrXVQa_n8g.PxWZCtJSsZ4mnOKSrKNb5j4CSJkBgLL8PmIB2Rkdmewg.JPEG%2FKakaoTalk_20260316_174712921.jpg&type=a340" alt="도쿄 타워" data-desc="1958년 완공된 높이 333m의 도쿄타워는 제2차 세계대전 이후 일본 부흥의 상징으로 세워졌습니다. 완공 당시 에펠탑을 능가하는 세계 최고 높이를 자랑했으며, 지금도 도쿄를 대표하는 랜드마크입니다.">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAzMTZfMTc4%2FMDAxNzczNjUyMDI0MTYx.MIg3FsSWMB1t_i7NIPnV1_6yHx3lKnvDh3GrXVQa_n8g.PxWZCtJSsZ4mnOKSrKNb5j4CSJkBgLL8PmIB2Rkdmewg.JPEG%2FKakaoTalk_20260316_174712921.jpg&type=a340" alt="도쿄 타워" data-desc="해질 무렵에 맞춰 전망대에 올라갔더니 낮의 도쿄 전경과 노을, 반짝이는 야경까지 한 번에 볼 수 있어서 타이밍 하나는 제대로 잡았다 싶었어요. 완공 당시 에펠탑보다도 높았다는 333m 빨간 철탑이라는 걸 알고 나니 내려다본 도쿄 시내가 더 특별하게 느껴졌습니다.">
                 <p class="trip-desc">도쿄타워</p>
             </div>
 
             <div class="trip-card">
-                <img src="../media/일본 시부야 스크램블.jpeg" alt="시부야 스크램블 교차로" data-desc="세계에서 가장 붐비는 횡단보도로 알려진 시부야 스크램블 교차로는 신호가 바뀌면 사방에서 사람들이 동시에 대각선으로 건너는 독특한 광경으로 유명합니다. 1973년 개통 이후 영화와 드라마에도 자주 등장하며 도쿄를 상징하는 장소가 되었습니다.">
+                <img src="../media/일본 시부야 스크램블.jpeg" alt="시부야 스크램블 교차로" data-desc="신호가 바뀌는 순간을 직접 보고 싶어서 일부러 교차로 앞에서 기다렸는데, 사방에서 사람들이 동시에 쏟아져 나와 걸어가는 광경이 정말 장관이었어요. 세계에서 가장 붐비는 횡단보도라는 말이 과장이 아니었고, 근처 스타벅스 2층에서 내려다보며 그 혼돈의 풍경을 한 번 더 눈에 담았습니다.">
                 <p class="trip-desc">시부야 스크램블 교차로</p>
             </div>
 
             <div class="trip-card">
-                <img src="../media/일본 롯폰기.jpeg" alt="롯폰기 일루미네이션" data-desc="롯폰기 힐즈의 게야키자카 거리는 겨울이면 약 400m에 걸쳐 93만 개의 파란빛 LED로 장식되는 도쿄 대표 일루미네이션 명소로 변신합니다. 도쿄타워를 배경 삼아 반짝이는 가로수 길은 매년 11월부터 12월까지 무료로 즐길 수 있습니다.">
+                <img src="../media/일본 롯폰기.jpeg" alt="롯폰기 일루미네이션" data-desc="겨울에 맞춰 롯폰기 힐즈 게야키자카 거리를 찾았는데, 약 400m 가로수길 전체가 파란빛 LED로 물들어 있는 모습이 정말 환상적이었어요. 저 멀리 도쿄타워까지 배경으로 잡혀서 사진 찍기에도 더할 나위 없이 좋았고, 이런 로맨틱한 풍경을 무료로 즐길 수 있다는 게 신기했습니다.">
                 <p class="trip-desc">롯폰기 일루미네이션</p>
             </div>
         </div>
